@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Colabora con MOVILIAX - Únete a nuestra comunidad de escritores, expertos y creadores de contenido sobre movilidad sostenible">
+    <title>Colaboradores - MOVILIAX</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --azul-profundo: #0A0F2C;
+            --cian-electrico: #00E0FF;
+            --gris-metalico: #7A7F8C;
+            --blanco: #FFFFFF;
+            --negro-carbon: #0D0D0D;
+            --violeta-tech: #6B46FF;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--azul-profundo);
+            color: var(--blanco);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 15, 44, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 224, 255, 0.2);
+        }
+
+        nav {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 28px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            color: var(--blanco);
+            text-decoration: none;
+        }
+
+        .logo-x {
+            color: var(--cian-electrico);
+            filter: drop-shadow(0 0 10px var(--cian-electrico));
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--blanco);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a:hover {
+            color: var(--cian-electrico);
+        }
+
+        /* Hero Section */
+        .page-hero {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(ellipse at center, #1a1f4a 0%, var(--azul-profundo) 70%);
+            padding: 150px 20px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent 40%, rgba(0, 224, 255, 0.05) 50%, transparent 60%);
+            animation: scan 8s linear infinite;
+        }
+
+        @keyframes scan {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 64px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--blanco) 0%, var(--cian-electrico) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            color: var(--gris-metalico);
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            padding: 18px 45px;
+            background: linear-gradient(135deg, var(--cian-electrico), #0099cc);
+            color: var(--azul-profundo);
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 224, 255, 0.4);
+        }
+
+        /* Main Content */
+        .content-section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 100px 60px;
+        }
+
+        .section-title {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: var(--cian-electrico);
+            text-align: center;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--gris-metalico);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+            line-height: 1.8;
+        }
+
+        /* Collaboration Types */
+        .collab-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            margin-bottom: 100px;
+        }
+
+        .collab-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(0, 224, 255, 0.2);
+            border-radius: 25px;
+            padding: 40px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .collab-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--cian-electrico), var(--violeta-tech));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .collab-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .collab-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--cian-electrico);
+            box-shadow: 0 25px 70px rgba(0, 224, 255, 0.25);
+        }
+
+        .collab-icon {
+            font-size: 56px;
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        .collab-card h3 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 26px;
+            margin-bottom: 15px;
+            color: var(--blanco);
+        }
+
+        .collab-card p {
+            color: var(--gris-metalico);
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 15px;
+        }
+
+        .collab-perks {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .collab-perks li {
+            padding: 8px 0;
+            color: var(--gris-metalico);
+            font-size: 14px;
+        }
+
+        .collab-perks li::before {
+            content: '✓';
+            color: var(--cian-electrico);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* Requirements Section */
+        .requirements-section {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 30px;
+            padding: 80px 60px;
+            margin-bottom: 100px;
+            border: 1px solid rgba(0, 224, 255, 0.1);
+        }
+
+        .requirements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+            margin-top: 50px;
+        }
+
+        .requirement-item {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(0, 224, 255, 0.02);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .requirement-item:hover {
+            background: rgba(0, 224, 255, 0.05);
+            transform: translateY(-5px);
+        }
+
+        .requirement-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, rgba(0, 224, 255, 0.1), rgba(107, 70, 255, 0.1));
+            border: 2px solid rgba(0, 224, 255, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+        }
+
+        .requirement-item h4 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: var(--cian-electrico);
+        }
+
+        .requirement-item p {
+            color: var(--gris-metalico);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        /* Featured Collaborators */
+        .featured-collabs {
+            margin-bottom: 100px;
+        }
+
+        .collabs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+            margin-top: 50px;
+        }
+
+        .collab-profile {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(0, 224, 255, 0.15);
+            border-radius: 20px;
+            padding: 35px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .collab-profile:hover {
+            border-color: var(--cian-electrico);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0, 224, 255, 0.2);
+        }
+
+        .collab-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, var(--cian-electrico), var(--violeta-tech));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            font-weight: 800;
+            color: var(--azul-profundo);
+            border: 3px solid rgba(0, 224, 255, 0.3);
+        }
+
+        .collab-name {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--blanco);
+        }
+
+        .collab-specialty {
+            color: var(--cian-electrico);
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .collab-bio {
+            color: var(--gris-metalico);
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .collab-stats {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--cian-electrico);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            color: var(--gris-metalico);
+            text-transform: uppercase;
+        }
+
+        /* Guidelines Section */
+        .guidelines-section {
+            margin-bottom: 100px;
+        }
+
+        .guidelines-content {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(0, 224, 255, 0.15);
+            border-radius: 25px;
+            padding: 50px;
+            margin-top: 40px;
+        }
+
+        .guidelines-content h3 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 24px;
+            color: var(--cian-electrico);
+            margin-bottom: 20px;
+        }
+
+        .guidelines-content p {
+            color: var(--gris-metalico);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .guidelines-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .guidelines-list li {
+            padding: 12px 0 12px 35px;
+            color: var(--gris-metalico);
+            line-height: 1.7;
+            position: relative;
+        }
+
+        .guidelines-list li::before {
+            content: '▸';
+            color: var(--cian-electrico);
+            position: absolute;
+            left: 10px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .highlight-box {
+            background: rgba(0, 224, 255, 0.05);
+            border-left: 4px solid var(--cian-electrico);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 5px;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            color: var(--blanco);
+            font-weight: 500;
+        }
+
+        /* Application Process */
+        .process-section {
+            margin-bottom: 100px;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .step-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(0, 224, 255, 0.15);
+            border-radius: 20px;
+            padding: 35px;
+            text-align: center;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .step-card:hover {
+            border-color: var(--cian-electrico);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 224, 255, 0.2);
+        }
+
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--cian-electrico), var(--violeta-tech));
+            color: var(--azul-profundo);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Exo 2', sans-serif;
+            font-size: 24px;
+            font-weight: 900;
+            border: 3px solid var(--azul-profundo);
+        }
+
+        .step-card h4 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 20px;
+            margin: 20px 0 15px;
+            color: var(--blanco);
+        }
+
+        .step-card p {
+            color: var(--gris-metalico);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin-bottom: 100px;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(0, 224, 255, 0.15);
+            border-radius: 15px;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: var(--cian-electrico);
+            box-shadow: 0 10px 30px rgba(0, 224, 255, 0.15);
+        }
+
+        .faq-item h4 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 18px;
+            color: var(--cian-electrico);
+            margin-bottom: 12px;
+        }
+
+        .faq-item p {
+            color: var(--gris-metalico);
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            padding: 80px 40px;
+            background: linear-gradient(135deg, rgba(0, 224, 255, 0.1), rgba(107, 70, 255, 0.1));
+            border-radius: 30px;
+        }
+
+        .cta-section h2 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            color: var(--gris-metalico);
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 20px 50px;
+            background: linear-gradient(135deg, var(--cian-electrico), #0099cc);
+            color: var(--azul-profundo);
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 50px rgba(0, 224, 255, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 40px 60px;
+            text-align: center;
+            border-top: 1px solid rgba(0, 224, 255, 0.2);
+        }
+
+        footer p {
+            color: var(--gris-metalico);
+            font-size: 14px;
+        }
+
+        footer a {
+            color: var(--cian-electrico);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--blanco);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 40px;
+            }
+
+            .content-section {
+                padding: 60px 30px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .collab-types,
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                padding: 20px 30px;
+            }
+
+            .nav-links {
+                gap: 20px;
+                font-size: 12px;
+            }
+
+            .guidelines-content {
+                padding: 30px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">MOVILI<span class="logo-x">A</span>X</a>
+            <ul class="nav-links">
+                <li><a href="index.html#contenido">Contenido</a></li>
+                <li><a href="equipo.html">Equipo</a></li>
+                <li><a href="colaboradores.html">Colabora</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="hero-content">
+            <h1>Colabora con MOVILIAX</h1>
+            <p>Únete a nuestra comunidad de expertos, escritores y creadores apasionados por el futuro de la movilidad sostenible en América Latina</p>
+            <a href="#tipos" class="hero-cta">Explorar Oportunidades</a>
+        </div>
+    </section>
+
+    <!-- Collaboration Types Section -->
+    <section class="content-section" id="tipos">
+        <h2 class="section-title">Formas de Colaborar</h2>
+        <p class="section-subtitle">Múltiples maneras de contribuir tu experiencia y conocimiento a nuestra plataforma</p>
+        
+        <div class="collab-types">
+            <div class="collab-card">
+                <span class="collab-icon">✍️</span>
+                <h3>Escritor Colaborador</h3>
+                <p>Escribe artículos, análisis y reportajes sobre movilidad sostenible, vehículos eléctricos, políticas públicas y tendencias del sector.</p>
+                <ul class="collab-perks">
+                    <li>Publicación con tu nombre y bio</li>
+                    <li>Alcance a 250K+ lectores mensuales</li>
+                    <li>Compensación por artículo publicado</li>
+                    <li>Portfolio y credibilidad profesional</li>
+                    <li>Acceso a eventos exclusivos</li>
+                </ul>
+            </div>
+
+            <div class="collab-card">
+                <span class="collab-icon">🎥</span>
+                <h3>Creador de Contenido</h3>
+                <p>Produce videos, podcasts, infografías o contenido multimedia sobre movilidad, EVs y tecnología de transporte.</p>
+                <ul class="collab-perks">
+                    <li>Distribución multiplataforma</li>
+                    <li>Soporte técnico y editorial</li>
+                    <li>Monetización de contenido</li>
+                    <li>Colaboraciones con marcas</li>
+                    <li>Growth de tu audiencia personal</li>
+                </ul>
+            </div>
+
+            <div class="collab-card">
+                <span class="collab-icon">🔬</span>
+                <h3>Experto/Analista</h3>
+                <p>Comparte tu expertise en entrevistas, webinars, estudios de caso y análisis técnicos especializados.</p>
+                <ul class="collab-perks">
+                    <li>Posicionamiento como thought leader</li>
+                    <li>Networking con industria</li>
+                    <li>Participación en investigaciones</li>
+                    <li>Honorarios por consultoría</li>
+                    <li>Oportunidades de speaking</li>
+                </ul>
+            </div>
+
+            <div class="collab-card">
+                <span class="collab-icon">📸</span>
+                <h3>Fotógrafo/Diseñador</h3>
+                <p>Crea contenido visual impactante: fotografías de EVs, eventos, infografías, ilustraciones y diseños.</p>
+                <ul class="collab-perks">
+                    <li>Créditos y atribución visible</li>
+                    <li>Licencias de uso flexibles</li>
+                    <li>Pago por proyecto</li>
+                    <li>Exposición de tu trabajo</li>
+                    <li>Proyectos colaborativos</li>
+                </ul>
+            </div>
+
+            <div class="collab-card">
+                <span class="collab-icon">🌐</span>
+                <h3>Traductor/Localizador</h3>
+                <p>Ayuda a adaptar nuestro contenido a diferentes mercados y idiomas de América Latina.</p>
+                <ul class="collab-perks">
+                    <li>Trabajo remoto y flexible</li>
+                    <li>Pago por palabra/proyecto</li>
+                    <li>Proyectos continuos</li>
+                    <li>Especialización en tu nicho</li>
+                    <li>Equipo internacional</li>
+                </ul>
+            </div>
+
+            <div class="collab-card">
+                <span class="collab-icon">🎓</span>
+                <h3>Educador/Facilitador</h3>
+                <p>Desarrolla y facilita cursos, talleres y programas educativos sobre movilidad sostenible.</p>
+                <ul class="collab-perks">
+                    <li>Diseño de currícula personalizada</li>
+                    <li>Plataforma de e-learning</li>
+                    <li>Revenue sharing por curso</li>
+                    <li>Comunidad de estudiantes activa</li>
+                    <li>Certificaciones conjuntas</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Requirements -->
+        <div class="requirements-section">
+            <h2 class="section-title">Lo Que Buscamos</h2>
+            <div class="requirements-grid">
+                <div class="requirement-item">
+                    <div class="requirement-icon">💡</div>
+                    <h4>Pasión por la Movilidad</h4>
+                    <p>Genuino interés en la electromovilidad, transporte sostenible y el futuro de las ciudades</p>
+                </div>
+                <div class="requirement-item">
+                    <div class="requirement-icon">📚</div>
+                    <h4>Conocimiento Especializado</h4>
+                    <p>Experiencia o formación en áreas relacionadas: ingeniería, periodismo, diseño, sostenibilidad</p>
+                </div>
+                <div class="requirement-item">
+                    <div class="requirement-icon">✨</div>
+                    <h4>Calidad y Originalidad</h4>
+                    <p>Capacidad para crear contenido único, bien investigado y de alto valor para nuestra audiencia</p>
+                </div>
+                <div class="requirement-item">
+                    <div class="requirement-icon">🗣️</div>
+                    <h4>Comunicación Clara</h4>
+                    <p>Habilidad para explicar conceptos complejos de manera accesible y engaging</p>
+                </div>
+                <div class="requirement-item">
+                    <div class="requirement-icon">🌎</div>
+                    <h4>Contexto Regional</h4>
+                    <p>Entendimiento de las particularidades y desafíos de la movilidad en América Latina</p>
+                </div>
+                <div class="requirement-item">
+                    <div class="requirement-icon">⏰</div>
+                    <h4>Compromiso</h4>
+                    <p>Responsabilidad con deadlines, comunicación proactiva y profesionalismo</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Featured Collaborators -->
+        <div class="featured-collabs">
+            <h2 class="section-title">Colaboradores Destacados</h2>
+            <p class="section-subtitle">Conoce a algunos de los profesionales que contribuyen regularmente a MOVILIAX</p>
+            
+            <div class="collabs-grid">
+                <div class="collab-profile">
+                    <div class="collab-avatar">RP</div>
+                    <h4 class="collab-name">Roberto Paz</h4>
+                    <p class="collab-specialty">Analista de Mercado</p>
+                    <p class="collab-bio">Economista especializado en mercados automotrices y tendencias de consumo en LATAM</p>
+                    <div class="collab-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">24</span>
+                            <span class="stat-label">Artículos</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50K</span>
+                            <span class="stat-label">Lecturas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collab-profile">
+                    <div class="collab-avatar">ST</div>
+                    <h4 class="collab-name">Sofía Torres</h4>
+                    <p class="collab-specialty">Ingeniera en EVs</p>
+                    <p class="collab-bio">Experta en tecnologías de baterías y sistemas de propulsión eléctrica</p>
+                    <div class="collab-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">18</span>
+                            <span class="stat-label">Reviews</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">35K</span>
+                            <span class="stat-label">Lecturas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collab-profile">
+                    <div class="collab-avatar">FM</div>
+                    <h4 class="collab-name">Felipe Moreno</h4>
+                    <p class="collab-specialty">Fotógrafo Automotriz</p>
+                    <p class="collab-bio">Especialista en fotografía de vehículos y eventos de la industria</p>
+                    <div class="collab-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">200+</span>
+                            <span class="stat-label">Imágenes</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">15</span>
+                            <span class="stat-label">Eventos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collab-profile">
+                    <div class="collab-avatar">VL</div>
+                    <h4 class="collab-name">Valentina López</h4>
+                    <p class="collab-specialty">Políticas Públicas</p>
+                    <p class="collab-bio">Asesora en regulación y políticas de movilidad urbana sostenible</p>
+                    <div class="collab-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">16</span>
+                            <span class="stat-label">Análisis</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">28K</span>
+                            <span class="stat-label">Lecturas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Guidelines -->
+        <div class="guidelines-section">
+            <h2 class="section-title">Guías Editoriales</h2>
+            <div class="guidelines-content">
+                <h3>Estándares de Contenido</h3>
+                <p>Para mantener la calidad y consistencia que caracterizan a MOVILIAX, todos los colaboradores deben seguir nuestras guías editoriales:</p>
+                
+                <div class="highlight-box">
+                    <p><strong>Independencia Editorial:</strong> Todo el contenido debe ser objetivo, basado en hechos y libre de sesgos comerciales. Cualquier conflicto de interés debe ser declarado.</p>
+                </div>
+
+                <ul class="guidelines-list">
+                    <li><strong>Originalidad:</strong> Todo el contenido debe ser 100% original. No aceptamos plagio ni contenido previamente publicado en otros medios sin autorización explícita.</li>
+                    <li><strong>Verificación de Datos:</strong> Todas las afirmaciones deben estar respaldadas por fuentes confiables. Incluye enlaces y referencias cuando sea apropiado.</li>
+                    <li><strong>Formato y Estructura:</strong> Utiliza títulos claros, párrafos concisos (3-5 líneas), bullet points cuando sea apropiado y un lenguaje accesible.</li>
+                    <li><strong>Extensión:</strong> Artículos entre 800-1500 palabras. Análisis profundos pueden extenderse a 2000-3000 palabras con aprobación previa.</li>
+                    <li><strong>Imágenes:</strong> Incluye al menos 2-3 imágenes de alta calidad con los derechos de uso apropiados y créditos correspondientes.</li>
+                    <li><strong>SEO:</strong> Incorpora keywords relevantes naturalmente, sin sacrificar la calidad del contenido.</li>
+                    <li><strong>Tono:</strong> Profesional pero accesible. Evita jerga innecesaria, pero usa terminología técnica cuando sea apropiado.</li>
+                    <li><strong>Revisión:</strong> Todo el contenido pasa por revisión editorial. Mantén comunicación abierta para ajustes y mejoras.</li>
+                </ul>
+
+                <h3 style="margin-top: 40px;">Proceso de Publicación</h3>
+                <ul class="guidelines-list">
+                    <li>Envía tu propuesta de tema para aprobación antes de escribir</li>
+                    <li>Una vez aprobado, tienes 7-10 días para entregar el primer borrador</li>
+                    <li>El equipo editorial revisará en 2-3 días hábiles</li>
+                    <li>Realiza las revisiones solicitadas en 2-3 días</li>
+                    <li>Publicación y promoción en nuestras plataformas</li>
+                    <li>Seguimiento de métricas y feedback para mejoras futuras</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Application Process -->
+        <div class="process-section">
+            <h2 class="section-title">Cómo Empezar</h2>
+            <p class="section-subtitle">Proceso simple para convertirte en colaborador de MOVILIAX</p>
+            
+            <div class="process-steps">
+                <div class="step-card">
+                    <span class="step-number">1</span>
+                    <h4>Aplicación</h4>
+                    <p>Completa el formulario con tu información, experiencia y muestras de tu trabajo</p>
+                </div>
+
+                <div class="step-card">
+                    <span class="step-number">2</span>
+                    <h4>Evaluación</h4>
+                    <p>Nuestro equipo editorial revisa tu perfil, portfolio y propuestas de contenido</p>
+                </div>
+
+                <div class="step-card">
+                    <span class="step-number">3</span>
+                    <h4>Entrevista</h4>
+                    <p>Conversación virtual para conocernos mejor y alinear expectativas</p>
+                </div>
+
+                <div class="step-card">
+                    <span class="step-number">4</span>
+                    <h4>Prueba de Contenido</h4>
+                    <p>Crea un artículo o contenido de prueba para evaluar fit y calidad</p>
+                </div>
+
+                <div class="step-card">
+                    <span class="step-number">5</span>
+                    <h4>Onboarding</h4>
+                    <p>Acceso a herramientas, guías editoriales y bienvenida al equipo</p>
+                </div>
+
+                <div class="step-card">
+                    <span class="step-number">6</span>
+                    <h4>Colaboración</h4>
+                    <p>Inicio de tu trabajo como colaborador regular de MOVILIAX</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="faq-section">
+            <h2 class="section-title">Preguntas Frecuentes</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>¿Necesito experiencia previa como escritor?</h4>
+                    <p>No necesariamente. Valoramos más tu conocimiento especializado y capacidad para comunicar. Si eres experto en tu campo y escribes con claridad, eres bienvenido.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>¿Cuánto se paga por artículo?</h4>
+                    <p>La compensación varía según tipo de contenido, extensión y experiencia del colaborador. Típicamente entre $100-$500 USD por artículo. Discutimos caso por caso.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>¿Puedo conservar los derechos de mi contenido?</h4>
+                    <p>MOVILIAX obtiene derechos de primera publicación y uso en nuestras plataformas. Después de 30 días, puedes republicar con atribución a MOVILIAX.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>¿Con qué frecuencia debo contribuir?</h4>
+                    <p>No hay requisito mínimo. Puedes contribuir tan frecuentemente como desees. Algunos colaboradores publican semanalmente, otros mensualmente.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>¿Puedo proponer cualquier tema?</h4>
+                    <p>Sí, pero debe estar relacionado con movilidad sostenible, EVs, transporte o temas afines. Todas las propuestas pasan por revisión editorial.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>¿Qué pasa si mi artículo es rechazado?</h4>
+                    <p>Proporcionamos feedback constructivo. Puedes revisar y volver a enviar, o proponer un tema diferente. El rechazo no afecta futuras colaboraciones.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-section">
+            <h2>¿Listo para Compartir tu Voz?</h2>
+            <p>Únete a nuestra comunidad de colaboradores y ayúdanos a transformar la movilidad en América Latina</p>
+            <a href="contacto.html" class="cta-button">Aplicar Ahora</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 HLG Innovación Digital. Todos los derechos reservados. | 
+            <a href="privacidad.html">Privacidad</a> | 
+            <a href="terminos.html">Términos</a> | 
+            <a href="contacto.html">Contacto</a> | 
+            <a href="equipo.html">Equipo</a>
+        </p>
+    </footer>
+</body>
+</html>
