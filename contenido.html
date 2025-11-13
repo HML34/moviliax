@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reportajes especiales y análisis profundos sobre movilidad en América Latina">
+    <title>Contenido - MOVILIAX</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <a href="index.html" class="logo" aria-label="MOVILIAX - Inicio">
+                MOVILIA<span class="logo-x">X</span>
+            </a>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="navLinks" role="navigation">
+                <li><a href="index.html#contenido">Contenido</a></li>
+                <li><a href="index.html#podcast">Podcast</a></li>
+                <li><a href="index.html#comunidad">Comunidad</a></li>
+                <li><a href="index.html#newsletter">Newsletter</a></li>
+                <li><a href="index.html#newsletter" class="nav-cta">Suscribirse</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero de la página -->
+    <section class="hero" style="min-height: 60vh; padding: 150px 20px 80px;">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-content">
+            <span class="hero-tag">📰 Reportajes Especiales</span>
+            <h1 style="font-size: clamp(40px, 6vw, 70px);">Análisis que Importan</h1>
+            <p class="hero-subtitle" style="max-width: 700px;">
+                Investigaciones profundas sobre tendencias, empresas y tecnologías que están 
+                transformando la movilidad en América Latina.
+            </p>
+        </div>
+    </section>
+
+    <!-- Filtros de contenido -->
+    <section style="padding: 40px 40px 20px; max-width: 1400px; margin: 0 auto;">
+        <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="evs">Vehículos Eléctricos</button>
+            <button class="filter-btn" data-filter="ciudades">Ciudades Inteligentes</button>
+            <button class="filter-btn" data-filter="tech">Tecnología</button>
+            <button class="filter-btn" data-filter="mercado">Mercado</button>
+        </div>
+    </section>
+
+    <!-- Grid de artículos -->
+    <section style="padding: 60px 40px; max-width: 1400px; margin: 0 auto;">
+        <div class="content-grid">
+            <!-- Artículo 1 -->
+            <article class="content-card" data-category="evs">
+                <div style="background: linear-gradient(135deg, rgba(0, 224, 255, 0.2), rgba(107, 70, 255, 0.2)); 
+                           height: 200px; border-radius: 15px; margin-bottom: 20px; display: flex; 
+                           align-items: center; justify-content: center; font-size: 60px;">
+                    🚗
+                </div>
+                <span style="font-size: 12px; color: var(--cian-electrico); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+                    Vehículos Eléctricos
+                </span>
+                <h3 class="card-title" style="margin-top: 10px;">
+                    El Boom de Tesla en México: Análisis del Mercado
+                </h3>
+                <p class="card-description">
+                    Tesla lidera la revolución eléctrica en México con un crecimiento del 150% en 2024. 
+                    Exploramos los factores clave de este éxito.
+                </p>
+                <div style="display: flex; align-items: center; gap: 15px; margin-top: 20px; color: var(--gris-metalico); font-size: 14px;">
+                    <span>📅 5 Enero 2025</span>
+                    <span>⏱️ 8 min lectura</span>
+                </div>
+                <a href="#" class="card-link" style="margin-top: 15px;">
+                    Leer artículo <span>→</span>
+                </a>
+            </article>
+
+            <!-- Artículo 2 -->
+            <article class="content-card" data-category="ciudades">
+                <div style="background: linear-gradient(135deg, rgba(107, 70, 255, 0.2), rgba(0, 224, 255, 0.2)); 
+                           height: 200px; border-radius: 15px; margin-bottom: 20px; display: flex; 
+                           align-items: center; justify-content: center; font-size: 60px;">
+                    🏙️
+                </div>
+                <span style="font-size: 12px; color: var(--violeta-tech); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+                    Ciudades Inteligentes
+                </span>
+                <h3 class="card-title" style="margin-top: 10px;">
+                    Buenos Aires: La Ciudad Más Innovadora de LATAM
+                </h3>
+                <p class="card-description">
+                    Cómo la capital argentina está implementando soluciones de movilidad inteligente 
+                    que reducen el tráfico en un 35%.
+                </p>
+                <div style="display: flex; align-items: center; gap: 15px; margin-top: 20px; color: var(--gris-metalico); font-size: 14px;">
+                    <span>📅 3 Enero 2025</span>
+                    <span>⏱️ 12 min lectura</span>
+                </div>
+                <a href="#" class="card-link" style="margin-top: 15px;">
+                    Leer artículo <span>→</span>
+                </a>
+            </article>
+
+            <!-- Artículo 3 -->
+            <article class="content-card" data-category="tech">
+                <div style="background: linear-gradient(135deg, rgba(0, 224, 255, 0.2), rgba(107, 70, 255, 0.2)); 
+                           height: 200px; border-radius: 15px; margin-bottom: 20px; display: flex; 
+                           align-items: center; justify-content: center; font-size: 60px;">
+                    🤖
+                </div>
+                <span style="font-size: 12px; color: var(--cian-electrico); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+                    Tecnología
+                </span>
+                <h3 class="card-title" style="margin-top: 10px;">
+                    IA en el Transporte: 5 Startups que Debes Conocer
+                </h3>
+                <p class="card-description">
+                    La inteligencia artificial está revolucionando la logística y el transporte. 
+                    Conoce las startups latinoamericanas liderando esta transformación.
+                </p>
+                <div style="display: flex; align-items: center; gap: 15px; margin-top: 20px; color: var(--gris-metalico); font-size: 14px;">
+                    <span>📅 28 Dic 2024</span>
+                    <span>⏱️ 10 min lectura</span>
+                </div>
+                <a href="#" class="card-link" style="margin-top: 15px;">
+                    Leer artículo <span>→</span>
+                </a>
+            </article>
+
+            <!-- Artículo 4 -->
+            <article class="content-card" data-category="mercado">
+                <div style="background: linear-gradient(135deg, rgba(107, 70, 255, 0.2), rgba(0, 224, 255, 0.2)); 
+                           height: 200px; border-radius: 15px; margin-bottom: 20px; display: flex; 
+                           align-items: center; justify-content: center; font-size: 60px;">
+                    📈
+                </div>
+                <span style="font-size: 12px; color: var(--violeta-tech); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+                    Análisis de Mercado
+                </span>
+                <h3 class="card-title" style="margin-top: 10px;">
+                    Inversión en Movilidad LATAM: $12.5B en 2024
+                </h3>
+                <p class="card-description">
+                    Desglose completo de las inversiones en movilidad sostenible en América Latina. 
+                    Sectores clave y proyecciones para 2025.
+                </p>
+                <div style="display: flex; align-items: center; gap: 15px; margin-top: 20px; color: var(--gris-metalico); font-size: 14px;">
+                    <span>📅 25 Dic 2024</span>
+                    <span>⏱️ 15 min lectura</span>
+                </div>
+                <a href="#" class="card-link" style="margin-top: 15px;">
+                    Leer artículo <span>→</span>
+                </a>
+            </article>
+
+            <!-- Artículo 5 -->
+            <article class="content-card" data-category="evs">
+                <div style="background: linear-gradient(135deg, rgba(0, 224, 255, 0.2), rgba(107, 70, 255, 0.2)); 
+                           height: 200px; border-radius: 15px; margin-bottom: 20px; display: flex; 
+                           align-items: center; justify-content: center; font-size: 60px;">
+                    🔋
+                </div>
+                <span style="font-size: 12px; color: var(--cian-electrico); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+                    Infraestructura
+                </span>
+                <h3 class="card-title" style="margin-top: 10px;">
+                    Red de Carga Rápida: Colombia Lidera en LATAM
+                </h3>
+                <p class="card-description">
+                    Colombia instala 200 estaciones de carga rápida en todo el país. 
+                    Entrevista con el CEO de Electrolinera.
+                </p>
+                <div style="display: flex; align-items: center; gap: 15px; margin-top: 20px; color: var(--gris-metalico); font-size: 14px;">
+                    <span>📅 20 Dic 2024</span>
+                    <span>⏱️ 9 min lectura</span>
+                </div>
+                <a href="#" class="card-link" style="margin-top: 15px;">
+                    Leer artículo <span>→</span>
+                </a>
+            </article>
+
+            <!-- Artículo 6 -->
+            <article class="content-card" data-category="ciudades">
+                <div style="background: linear-gradient(135deg, rgba(107, 70, 255, 0.2), rgba(0, 224, 255, 0.2)); 
+                           height: 200px; border-radius: 15px; margin-bottom: 20px; display: flex; 
+                           align-items: center; justify-content: center; font-size: 60px;">
+                    🚲
+                </div>
+                <span style="font-size: 12px; color: var(--violeta-tech); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+                    Micromovilidad
+                </span>
+                <h3 class="card-title" style="margin-top: 10px;">
+                    Santiago: Capital de la Micromovilidad en Sudamérica
+                </h3>
+                <p class="card-description">
+                    Scooters y bicicletas eléctricas transforman el transporte en Santiago de Chile. 
+                    Análisis del impacto económico y ambiental.
+                </p>
+                <div style="display: flex; align-items: center; gap: 15px; margin-top: 20px; color: var(--gris-metalico); font-size: 14px;">
+                    <span>📅 15 Dic 2024</span>
+                    <span>⏱️ 11 min lectura</span>
+                </div>
+                <a href="#" class="card-link" style="margin-top: 15px;">
+                    Leer artículo <span>→</span>
+                </a>
+            </article>
+        </div>
+
+        <!-- Paginación -->
+        <div style="display: flex; justify-content: center; gap: 15px; margin-top: 60px;">
+            <button style="padding: 12px 20px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); 
+                          border-radius: 10px; color: var(--blanco); cursor: pointer; font-weight: 600;" disabled>
+                ← Anterior
+            </button>
+            <button style="padding: 12px 20px; background: var(--cian-electrico); border: none; 
+                          border-radius: 10px; color: var(--azul-profundo); cursor: pointer; font-weight: 700;">
+                1
+            </button>
+            <button style="padding: 12px 20px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); 
+                          border-radius: 10px; color: var(--blanco); cursor: pointer; font-weight: 600;">
+                2
+            </button>
+            <button style="padding: 12px 20px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); 
+                          border-radius: 10px; color: var(--blanco); cursor: pointer; font-weight: 600;">
+                3
+            </button>
+            <button style="padding: 12px 20px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); 
+                          border-radius: 10px; color: var(--blanco); cursor: pointer; font-weight: 600;">
+                Siguiente →
+            </button>
+        </div>
+    </section>
+
+    <!-- CTA Newsletter -->
+    <section id="newsletter" class="newsletter-premium" style="margin: 60px 40px;">
+        <span class="newsletter-badge">⚡ Gratuito & Semanal</span>
+        <h2>RADAR<span class="logo-x">X</span></h2>
+        <p>
+            No te pierdas ningún análisis. Recibe RADARX cada domingo en tu inbox.
+        </p>
+        
+        <form class="newsletter-form" id="newsletterForm" novalidate>
+            <input 
+                type="email" 
+                class="newsletter-input" 
+                id="emailInput"
+                placeholder="tu@email.com" 
+                required
+                aria-label="Correo electrónico para suscripción"
+                autocomplete="email"
+            >
+            <button type="submit" class="newsletter-button" id="submitButton">
+                Suscribirme
+            </button>
+        </form>
+        
+        <div class="form-message" id="formMessage"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">MOVILIA<span class="logo-x">X</span></div>
+                <p>
+                    El punto de conexión entre la movilidad humana y la inteligencia tecnológica.
+                </p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1C3SnM1Cy8/" class="social-icon">📘</a>
+                    <a href="https://x.com/MoviliaxD54988" class="social-icon">🐦</a>
+                    <a href="https://www.instagram.com/moviliax_lat?igsh=MXJ5enQyN29nbmhnaQ==" class="social-icon">📸</a>
+                    <a href="https://www.linkedin.com/company/moviliax/" class="social-icon">💼</a>
+                    <a href="https://www.youtube.com/@MoviliaXDigital" class="social-icon">▶️</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contenido</h4>
+                <ul class="footer-links">
+                    <li><a href="contenido.html">Reportajes Especiales</a></li>
+                    <li><a href="moviliaxtalks.html">Entrevistas</a></li>
+                    <li><a href="https://www.youtube.com/@MoviliaXDigital">Videos</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Comunidad</h4>
+                <ul class="footer-links">
+                    <li><a href="moviliaxconnect.html">MOVILIAX Connect</a></li>
+                    <li><a href="colaboradores.html">Colaboradores</a></li>
+                    <li><a href="partners.html">Partners</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Empresa</h4>
+                <ul class="footer-links">
+                    <li><a href="acercade.html">Sobre Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="privacidad.html">Privacidad</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 HLG Innovación Digital. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Volver arriba">↑</button>
+
+    <style>
+        .filter-btn {
+            padding: 12px 24px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            color: var(--blanco);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 14px;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--cian-electrico);
+            color: var(--azul-profundo);
+            border-color: var(--cian-electrico);
+            transform: translateY(-2px);
+        }
+
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    </style>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

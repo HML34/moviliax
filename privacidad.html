@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Política de Privacidad de MOVILIAX - Comprometidos con la protección de tus datos personales">
+    <title>Política de Privacidad - MOVILIAX</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --azul-profundo: #0A0F2C;
+            --cian-electrico: #00E0FF;
+            --gris-metalico: #7A7F8C;
+            --blanco: #FFFFFF;
+            --negro-carbon: #0D0D0D;
+            --violeta-tech: #6B46FF;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--azul-profundo);
+            color: var(--blanco);
+            overflow-x: hidden;
+            line-height: 1.8;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 15, 44, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 224, 255, 0.2);
+        }
+
+        nav {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 28px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            color: var(--blanco);
+            text-decoration: none;
+        }
+
+        .logo-x {
+            color: var(--cian-electrico);
+            filter: drop-shadow(0 0 10px var(--cian-electrico));
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--blanco);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a:hover {
+            color: var(--cian-electrico);
+        }
+
+        /* Hero Section */
+        .page-hero {
+            min-height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(ellipse at center, #1a1f4a 0%, var(--azul-profundo) 70%);
+            padding: 150px 20px 60px;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, var(--blanco) 0%, var(--cian-electrico) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-content p {
+            font-size: 16px;
+            color: var(--gris-metalico);
+        }
+
+        /* Content Section */
+        .content-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 40px 100px;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: var(--cian-electrico);
+            font-weight: 600;
+            margin-bottom: 40px;
+            padding: 15px;
+            background: rgba(0, 224, 255, 0.05);
+            border-radius: 10px;
+            border: 1px solid rgba(0, 224, 255, 0.2);
+        }
+
+        .content-section h2 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 28px;
+            color: var(--cian-electrico);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(0, 224, 255, 0.3);
+        }
+
+        .content-section h3 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 22px;
+            color: var(--blanco);
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .content-section p {
+            color: var(--gris-metalico);
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .content-section ul, 
+        .content-section ol {
+            color: var(--gris-metalico);
+            margin-bottom: 20px;
+            padding-left: 30px;
+        }
+
+        .content-section li {
+            margin-bottom: 12px;
+            line-height: 1.8;
+        }
+
+        .content-section strong {
+            color: var(--blanco);
+            font-weight: 600;
+        }
+
+        .highlight-box {
+            background: rgba(0, 224, 255, 0.05);
+            border-left: 4px solid var(--cian-electrico);
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 5px;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+        }
+
+        .contact-box {
+            background: rgba(107, 70, 255, 0.1);
+            border: 1px solid rgba(107, 70, 255, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .contact-box h3 {
+            margin-top: 0;
+            color: var(--violeta-tech);
+        }
+
+        .contact-box a {
+            color: var(--cian-electrico);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 40px 60px;
+            text-align: center;
+            border-top: 1px solid rgba(0, 224, 255, 0.2);
+        }
+
+        footer p {
+            color: var(--gris-metalico);
+            font-size: 14px;
+        }
+
+        footer a {
+            color: var(--cian-electrico);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--blanco);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 36px;
+            }
+
+            .content-section {
+                padding: 40px 25px 80px;
+            }
+
+            .content-section h2 {
+                font-size: 24px;
+            }
+
+            nav {
+                padding: 20px 30px;
+            }
+
+            .nav-links {
+                gap: 20px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">MOVILI<span class="logo-x">A</span>X</a>
+            <ul class="nav-links">
+                <li><a href="index.html#contenido">Contenido</a></li>
+                <li><a href="equipo.html">Equipo</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="hero-content">
+            <h1>Política de Privacidad</h1>
+            <p>Tu privacidad es importante para nosotros</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="last-updated">
+            <strong>Última actualización:</strong> 2 de noviembre de 2025
+        </div>
+
+        <p>En MOVILIAX nos comprometemos a proteger tu privacidad y a ser transparentes sobre cómo recopilamos, usamos y compartimos tu información personal. Esta Política de Privacidad describe nuestras prácticas de manejo de datos cuando utilizas nuestro sitio web y servicios.</p>
+
+        <h2>1. Información que Recopilamos</h2>
+        
+        <h3>1.1 Información que Proporcionas Directamente</h3>
+        <p>Recopilamos información que nos proporcionas voluntariamente cuando:</p>
+        <ul>
+            <li>Te suscribes a nuestro boletín informativo</li>
+            <li>Completas formularios de contacto</li>
+            <li>Participas en encuestas o promociones</li>
+            <li>Comentas en nuestros artículos</li>
+            <li>Envías consultas o solicitudes de información</li>
+        </ul>
+        <p>Esta información puede incluir: nombre, dirección de correo electrónico, empresa, cargo, país de residencia y cualquier otra información que decidas compartir con nosotros.</p>
+
+        <h3>1.2 Información Recopilada Automáticamente</h3>
+        <p>Cuando visitas nuestro sitio web, recopilamos automáticamente cierta información sobre tu dispositivo y tu interacción con nuestro sitio, incluyendo:</p>
+        <ul>
+            <li>Dirección IP y ubicación geográfica general</li>
+            <li>Tipo de navegador y sistema operativo</li>
+            <li>Páginas visitadas y tiempo de permanencia</li>
+            <li>Fuente de referencia (cómo llegaste a nuestro sitio)</li>
+            <li>Información del dispositivo (modelo, resolución de pantalla)</li>
+        </ul>
+
+        <h3>1.3 Cookies y Tecnologías Similares</h3>
+        <p>Utilizamos cookies y tecnologías similares para mejorar tu experiencia en nuestro sitio. Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo. Utilizamos cookies para:</p>
+        <ul>
+            <li>Recordar tus preferencias y configuraciones</li>
+            <li>Analizar el tráfico y patrones de uso del sitio</li>
+            <li>Personalizar el contenido que ves</li>
+            <li>Medir la efectividad de nuestras campañas</li>
+        </ul>
+
+        <h2>2. Cómo Usamos Tu Información</h2>
+        <p>Utilizamos la información recopilada para los siguientes propósitos:</p>
+        <ul>
+            <li><strong>Proveer y mejorar nuestros servicios:</strong> Para entregar el contenido solicitado, responder consultas y mejorar nuestro sitio web</li>
+            <li><strong>Comunicaciones:</strong> Para enviarte boletines informativos, actualizaciones y contenido relevante sobre movilidad sostenible (solo si te has suscrito)</li>
+            <li><strong>Análisis y estadísticas:</strong> Para entender cómo los usuarios interactúan con nuestro sitio y mejorar la experiencia</li>
+            <li><strong>Seguridad:</strong> Para detectar, prevenir y abordar fraudes, abusos o problemas técnicos</li>
+            <li><strong>Cumplimiento legal:</strong> Para cumplir con obligaciones legales y responder a solicitudes legales válidas</li>
+        </ul>
+
+        <h2>3. Compartir Tu Información</h2>
+        <p>No vendemos, alquilamos ni compartimos tu información personal con terceros para fines comerciales. Podemos compartir tu información en las siguientes circunstancias limitadas:</p>
+
+        <h3>3.1 Proveedores de Servicios</h3>
+        <p>Compartimos información con proveedores externos que nos ayudan a operar nuestro sitio web y servicios, incluyendo:</p>
+        <ul>
+            <li>Servicios de análisis web (Google Analytics)</li>
+            <li>Plataformas de email marketing</li>
+            <li>Servicios de hosting y almacenamiento en la nube</li>
+            <li>Procesadores de pagos (si aplicable)</li>
+        </ul>
+        <p>Estos proveedores están obligados contractualmente a proteger tu información y solo pueden usarla según nuestras instrucciones.</p>
+
+        <h3>3.2 Requerimientos Legales</h3>
+        <p>Podemos divulgar tu información si es requerido por ley, orden judicial, proceso legal, o para proteger los derechos, propiedad o seguridad de MOVILIAX, nuestros usuarios o el público.</p>
+
+        <h2>4. Tus Derechos y Opciones</h2>
+        <p>Tienes los siguientes derechos respecto a tu información personal:</p>
+
+        <div class="highlight-box">
+            <p><strong>Derecho de Acceso:</strong> Puedes solicitar una copia de la información personal que tenemos sobre ti.</p>
+        </div>
+
+        <div class="highlight-box">
+            <p><strong>Derecho de Rectificación:</strong> Puedes solicitar que corrijamos información inexacta o incompleta.</p>
+        </div>
+
+        <div class="highlight-box">
+            <p><strong>Derecho de Supresión:</strong> Puedes solicitar que eliminemos tu información personal, sujeto a ciertas excepciones legales.</p>
+        </div>
+
+        <div class="highlight-box">
+            <p><strong>Derecho de Oposición:</strong> Puedes oponerte al procesamiento de tu información personal para ciertos fines.</p>
+        </div>
+
+        <div class="highlight-box">
+            <p><strong>Derecho a la Portabilidad:</strong> Puedes solicitar una copia de tu información en un formato estructurado y de uso común.</p>
+        </div>
+
+        <h3>4.1 Cancelar Suscripción</h3>
+        <p>Puedes cancelar tu suscripción a nuestros boletines en cualquier momento haciendo clic en el enlace "Cancelar suscripción" que aparece en cada email, o contactándonos directamente.</p>
+
+        <h3>4.2 Gestión de Cookies</h3>
+        <p>La mayoría de los navegadores web aceptan cookies automáticamente, pero puedes modificar la configuración de tu navegador para rechazarlas. Ten en cuenta que algunas funciones del sitio pueden no funcionar correctamente sin cookies.</p>
+
+        <h2>5. Seguridad de los Datos</h2>
+        <p>Implementamos medidas de seguridad técnicas y organizativas apropiadas para proteger tu información personal contra acceso no autorizado, alteración, divulgación o destrucción. Estas medidas incluyen:</p>
+        <ul>
+            <li>Encriptación SSL/TLS para la transmisión de datos</li>
+            <li>Controles de acceso estrictos</li>
+            <li>Monitoreo regular de sistemas</li>
+            <li>Capacitación del personal en protección de datos</li>
+        </ul>
+        <p>Sin embargo, ningún método de transmisión por Internet o almacenamiento electrónico es 100% seguro. No podemos garantizar la seguridad absoluta de tu información.</p>
+
+        <h2>6. Retención de Datos</h2>
+        <p>Conservamos tu información personal solo durante el tiempo necesario para cumplir con los propósitos descritos en esta política, a menos que la ley requiera o permita un período de retención más largo. Cuando tu información ya no sea necesaria, la eliminaremos o anonimizaremos de forma segura.</p>
+
+        <h2>7. Enlaces a Terceros</h2>
+        <p>Nuestro sitio web puede contener enlaces a sitios web de terceros. No somos responsables de las prácticas de privacidad de estos sitios. Te recomendamos leer las políticas de privacidad de cualquier sitio web de terceros que visites.</p>
+
+        <h2>8. Privacidad de Menores</h2>
+        <p>Nuestros servicios no están dirigidos a menores de 16 años. No recopilamos intencionalmente información personal de menores. Si descubrimos que hemos recopilado información de un menor sin el consentimiento parental verificable, la eliminaremos de inmediato.</p>
+
+        <h2>9. Transferencias Internacionales</h2>
+        <p>Tu información puede ser transferida y mantenida en servidores ubicados fuera de tu país de residencia, donde las leyes de protección de datos pueden ser diferentes. Al usar nuestros servicios, consientes estas transferencias.</p>
+
+        <h2>10. Cambios a Esta Política</h2>
+        <p>Podemos actualizar esta Política de Privacidad periódicamente para reflejar cambios en nuestras prácticas o por razones legales, operativas o regulatorias. La fecha de "Última actualización" al inicio de esta política indica cuándo fue revisada por última vez. Te notificaremos sobre cambios significativos publicando la nueva política en nuestro sitio web y, cuando sea apropiado, a través de otros canales de comunicación.</p>
+
+        <h2>11. Jurisdicción y Ley Aplicable</h2>
+        <p>Esta Política de Privacidad se rige por las leyes aplicables en América Latina y las regulaciones internacionales de protección de datos, incluyendo el Reglamento General de Protección de Datos (GDPR) de la Unión Europea cuando sea aplicable.</p>
+
+        <div class="contact-box">
+            <h3>¿Preguntas sobre tu Privacidad?</h3>
+            <p>Si tienes preguntas, inquietudes o deseas ejercer tus derechos relacionados con tu información personal, contáctanos:</p>
+            <p><strong>Email:</strong> <a href="mailto:privacidad@moviliax.com">privacidad@moviliax.com</a></p>
+            <p>Responderemos a tu solicitud dentro de los 30 días hábiles siguientes a su recepción.</p>
+        </div>
+
+        <p style="margin-top: 40px; font-size: 14px; color: var(--gris-metalico); text-align: center;">
+            Al utilizar nuestro sitio web y servicios, aceptas esta Política de Privacidad y nuestros <a href="terminos.html" style="color: var(--cian-electrico);">Términos y Condiciones</a>.
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 MOVILIAX. Todos los derechos reservados. | 
+            <a href="privacidad.html">Privacidad</a> | 
+            <a href="terminos.html">Términos</a> | 
+            <a href="contacto.html">Contacto</a> | 
+            <a href="equipo.html">Equipo</a>
+        </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Partners de MOVILIAX - Alianzas estratégicas para transformar la movilidad en América Latina">
+    <title>Partners - MOVILIAX</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --azul-profundo: #0A0F2C;
+            --cian-electrico: #00E0FF;
+            --gris-metalico: #7A7F8C;
+            --blanco: #FFFFFF;
+            --negro-carbon: #0D0D0D;
+            --violeta-tech: #6B46FF;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--azul-profundo);
+            color: var(--blanco);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 15, 44, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 224, 255, 0.2);
+        }
+
+        nav {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 28px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            color: var(--blanco);
+            text-decoration: none;
+        }
+
+        .logo-x {
+            color: var(--cian-electrico);
+            filter: drop-shadow(0 0 10px var(--cian-electrico));
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--blanco);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a:hover {
+            color: var(--cian-electrico);
+        }
+
+        /* Hero Section */
+        .page-hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(ellipse at center, #1a1f4a 0%, var(--azul-profundo) 70%);
+            padding: 150px 20px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent 40%, rgba(0, 224, 255, 0.05) 50%, transparent 60%);
+            animation: scan 8s linear infinite;
+        }
+
+        @keyframes scan {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .hero-content {
+            max-width: 900px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 64px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--blanco) 0%, var(--cian-electrico) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            color: var(--gris-metalico);
+            line-height: 1.8;
+        }
+
+        /* Main Content */
+        .content-section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 100px 60px;
+        }
+
+        .section-title {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: var(--cian-electrico);
+            text-align: center;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--gris-metalico);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+            line-height: 1.8;
+        }
+
+        /* Partnership Types */
+        .partnership-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 100px;
+        }
+
+        .partnership-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(0, 224, 255, 0.2);
+            border-radius: 25px;
+            padding: 40px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .partnership-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--cian-electrico), var(--violeta-tech));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .partnership-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .partnership-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--cian-electrico);
+            box-shadow: 0 25px 70px rgba(0, 224, 255, 0.25);
+        }
+
+        .partnership-icon {
+            font-size: 56px;
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        .partnership-card h3 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 26px;
+            margin-bottom: 15px;
+            color: var(--blanco);
+        }
+
+        .partnership-card p {
+            color: var(--gris-metalico);
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 15px;
+        }
+
+        .partnership-features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .partnership-features li {
+            padding: 8px 0;
+            color: var(--gris-metalico);
+            font-size: 14px;
+        }
+
+        .partnership-features li::before {
+            content: '→';
+            color: var(--cian-electrico);
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        /* Current Partners Grid */
+        .partners-showcase {
+            margin-bottom: 100px;
+        }
+
+        .partners-categories {
+            margin-top: 60px;
+        }
+
+        .category-section {
+            margin-bottom: 60px;
+        }
+
+        .category-title {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 28px;
+            color: var(--cian-electrico);
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid rgba(0, 224, 255, 0.2);
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+        }
+
+        .partner-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(0, 224, 255, 0.15);
+            border-radius: 20px;
+            padding: 35px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .partner-card:hover {
+            border-color: var(--cian-electrico);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0, 224, 255, 0.2);
+        }
+
+        .partner-logo {
+            font-size: 32px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .partner-name {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--blanco);
+            margin-bottom: 8px;
+        }
+
+        .partner-type {
+            font-size: 12px;
+            color: var(--cian-electrico);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .partner-description {
+            font-size: 13px;
+            color: var(--gris-metalico);
+            line-height: 1.6;
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 30px;
+            padding: 80px 60px;
+            margin-bottom: 100px;
+            border: 1px solid rgba(0, 224, 255, 0.1);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+            margin-top: 50px;
+        }
+
+        .benefit-item {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, rgba(0, 224, 255, 0.1), rgba(107, 70, 255, 0.1));
+            border: 2px solid rgba(0, 224, 255, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-item:hover .benefit-icon {
+            transform: scale(1.1);
+            border-color: var(--cian-electrico);
+            box-shadow: 0 10px 30px rgba(0, 224, 255, 0.3);
+        }
+
+        .benefit-item h4 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: var(--blanco);
+        }
+
+        .benefit-item p {
+            color: var(--gris-metalico);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        /* Success Stories */
+        .success-stories {
+            margin-bottom: 100px;
+        }
+
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .story-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(0, 224, 255, 0.15);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .story-card:hover {
+            border-color: var(--cian-electrico);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 224, 255, 0.2);
+        }
+
+        .story-header {
+            background: linear-gradient(135deg, rgba(0, 224, 255, 0.1), rgba(107, 70, 255, 0.1));
+            padding: 30px;
+            border-bottom: 1px solid rgba(0, 224, 255, 0.2);
+        }
+
+        .story-partner {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--cian-electrico);
+            margin-bottom: 5px;
+        }
+
+        .story-tagline {
+            font-size: 14px;
+            color: var(--gris-metalico);
+        }
+
+        .story-content {
+            padding: 30px;
+        }
+
+        .story-content p {
+            color: var(--gris-metalico);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .story-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 32px;
+            font-weight: 900;
+            color: var(--cian-electrico);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--gris-metalico);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Application Process */
+        .process-section {
+            margin-bottom: 100px;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+            position: relative;
+        }
+
+        .step-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(0, 224, 255, 0.15);
+            border-radius: 20px;
+            padding: 35px;
+            text-align: center;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .step-card:hover {
+            border-color: var(--cian-electrico);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 224, 255, 0.2);
+        }
+
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--cian-electrico), var(--violeta-tech));
+            color: var(--azul-profundo);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Exo 2', sans-serif;
+            font-size: 24px;
+            font-weight: 900;
+            border: 3px solid var(--azul-profundo);
+        }
+
+        .step-card h4 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 20px;
+            margin: 20px 0 15px;
+            color: var(--blanco);
+        }
+
+        .step-card p {
+            color: var(--gris-metalico);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            padding: 80px 40px;
+            background: linear-gradient(135deg, rgba(0, 224, 255, 0.1), rgba(107, 70, 255, 0.1));
+            border-radius: 30px;
+        }
+
+        .cta-section h2 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            color: var(--gris-metalico);
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 20px 50px;
+            background: linear-gradient(135deg, var(--cian-electrico), #0099cc);
+            color: var(--azul-profundo);
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 50px rgba(0, 224, 255, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 40px 60px;
+            text-align: center;
+            border-top: 1px solid rgba(0, 224, 255, 0.2);
+        }
+
+        footer p {
+            color: var(--gris-metalico);
+            font-size: 14px;
+        }
+
+        footer a {
+            color: var(--cian-electrico);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--blanco);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 40px;
+            }
+
+            .content-section {
+                padding: 60px 30px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .partnership-types,
+            .partners-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                padding: 20px 30px;
+            }
+
+            .nav-links {
+                gap: 20px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">MOVILI<span class="logo-x">A</span>X</a>
+            <ul class="nav-links">
+                <li><a href="index.html#contenido">Contenido</a></li>
+                <li><a href="equipo.html">Equipo</a></li>
+                <li><a href="partners.html">Partners</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="hero-content">
+            <h1>Nuestros Partners</h1>
+            <p>Alianzas estratégicas que impulsan la transformación de la movilidad sostenible en América Latina</p>
+        </div>
+    </section>
+
+    <!-- Partnership Types Section -->
+    <section class="content-section">
+        <h2 class="section-title">Tipos de Alianzas</h2>
+        <p class="section-subtitle">Desarrollamos colaboraciones estratégicas que crean valor compartido y aceleran la adopción de movilidad sostenible</p>
+        
+        <div class="partnership-types">
+            <div class="partnership-card">
+                <span class="partnership-icon">🏢</span>
+                <h3>Partners Estratégicos</h3>
+                <p>Organizaciones que comparten nuestra visión y trabajan con nosotros en iniciativas de largo plazo para transformar el ecosistema de movilidad.</p>
+                <ul class="partnership-features">
+                    <li>Co-creación de contenido especializado</li>
+                    <li>Eventos y conferencias conjuntas</li>
+                    <li>Investigación y estudios de mercado</li>
+                    <li>Programas de educación y advocacy</li>
+                </ul>
+            </div>
+
+            <div class="partnership-card">
+                <span class="partnership-icon">🎓</span>
+                <h3>Partners Académicos</h3>
+                <p>Universidades e instituciones educativas que colaboran en investigación, formación y generación de conocimiento sobre movilidad sostenible.</p>
+                <ul class="partnership-features">
+                    <li>Proyectos de investigación conjuntos</li>
+                    <li>Programas de prácticas y pasantías</li>
+                    <li>Webinars y seminarios educativos</li>
+                    <li>Publicación de estudios académicos</li>
+                </ul>
+            </div>
+
+            <div class="partnership-card">
+                <span class="partnership-icon">🔧</span>
+                <h3>Partners Tecnológicos</h3>
+                <p>Empresas tecnológicas que proporcionan soluciones innovadoras para mejorar nuestra plataforma y expandir nuestro alcance.</p>
+                <ul class="partnership-features">
+                    <li>Integración de herramientas digitales</li>
+                    <li>Desarrollo de aplicaciones y servicios</li>
+                    <li>Analytics y data insights</li>
+                    <li>Optimización de experiencia de usuario</li>
+                </ul>
+            </div>
+
+            <div class="partnership-card">
+                <span class="partnership-icon">🌍</span>
+                <h3>Partners de Medios</h3>
+                <p>Medios de comunicación y plataformas digitales que amplifican nuestro mensaje y extienden nuestro alcance en toda América Latina.</p>
+                <ul class="partnership-features">
+                    <li>Distribución de contenido multiplataforma</li>
+                    <li>Campañas de comunicación conjuntas</li>
+                    <li>Intercambio de audiencias</li>
+                    <li>Cobertura de eventos especiales</li>
+                </ul>
+            </div>
+
+            <div class="partnership-card">
+                <span class="partnership-icon">🏛️</span>
+                <h3>Partners Institucionales</h3>
+                <p>Gobiernos, organismos multilaterales y ONGs que trabajan en políticas públicas y regulación de movilidad sostenible.</p>
+                <ul class="partnership-features">
+                    <li>Análisis de políticas públicas</li>
+                    <li>Apoyo en iniciativas regulatorias</li>
+                    <li>Foros de diálogo multisectorial</li>
+                    <li>Proyectos de impacto social</li>
+                </ul>
+            </div>
+
+            <div class="partnership-card">
+                <span class="partnership-icon">🚗</span>
+                <h3>Partners de Industria</h3>
+                <p>Fabricantes, distribuidores y proveedores de soluciones de movilidad que colaboran en probar y difundir nuevas tecnologías.</p>
+                <ul class="partnership-features">
+                    <li>Pruebas y reviews de vehículos</li>
+                    <li>Lanzamientos de productos</li>
+                    <li>Test drives y experiencias</li>
+                    <li>Contenido técnico especializado</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Current Partners -->
+        <div class="partners-showcase">
+            <h2 class="section-title">Nuestros Partners Actuales</h2>
+            <p class="section-subtitle">Organizaciones que confían en nosotros y colaboran activamente en nuestra misión</p>
+            
+            <div class="partners-categories">
+                <!-- Strategic Partners -->
+                <div class="category-section">
+                    <h3 class="category-title">Partners Estratégicos</h3>
+                    <div class="partners-grid">
+                        <div class="partner-card">
+                            <span class="partner-logo">🔋</span>
+                            <h4 class="partner-name">Asociación LATAM EV</h4>
+                            <p class="partner-type">Asociación Industrial</p>
+                            <p class="partner-description">Líder regional en promoción de vehículos eléctricos</p>
+                        </div>
+                        <div class="partner-card">
+                            <span class="partner-logo">🌿</span>
+                            <h4 class="partner-name">Green Transport Alliance</h4>
+                            <p class="partner-type">ONG Ambiental</p>
+                            <p class="partner-description">Advocacy por transporte sostenible en las Américas</p>
+                        </div>
+                        <div class="partner-card">
+                            <span class="partner-logo">🏙️</span>
+                            <h4 class="partner-name">Smart Cities Network</h4>
+                            <p class="partner-type">Red de Innovación</p>
+                            <p class="partner-description">Conectando ciudades inteligentes de la región</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Academic Partners -->
+                <div class="category-section">
+                    <h3 class="category-title">Partners Académicos</h3>
+                    <div class="partners-grid">
+                        <div class="partner-card">
+                            <span class="partner-logo">🎓</span>
+                            <h4 class="partner-name">Instituto Tecnológico de Monterrey</h4>
+                            <p class="partner-type">Universidad</p>
+                            <p class="partner-description">Investigación en movilidad y sostenibilidad</p>
+                        </div>
+                        <div class="partner-card">
+                            <span class="partner-logo">📚</span>
+                            <h4 class="partner-name">Universidad de São Paulo</h4>
+                            <p class="partner-type">Centro de Investigación</p>
+                            <p class="partner-description">Estudios sobre transporte urbano sostenible</p>
+                        </div>
+                        <div class="partner-card">
+                            <span class="partner-logo">🔬</span>
+                            <h4 class="partner-name">Centro de Innovación UC</h4>
+                            <p class="partner-type">Laboratorio</p>
+                            <p class="partner-description">Desarrollo de tecnologías de movilidad</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technology Partners -->
+                <div class="category-section">
+                    <h3 class="category-title">Partners Tecnológicos</h3>
+                    <div class="partners-grid">
+                        <div class="partner-card">
+                            <span class="partner-logo">📊</span>
+                            <h4 class="partner-name">DataMobility</h4>
+                            <p class="partner-type">Analytics</p>
+                            <p class="partner-description">Plataforma de datos de movilidad urbana</p>
+                        </div>
+                        <div class="partner-card">
+                            <span class="partner-logo">🗺️</span>
+                            <h4 class="partner-name">ChargeMap</h4>
+                            <p class="partner-type">Mapeo Digital</p>
+                            <p class="partner-description">Red de estaciones de carga en LATAM</p>
+                        </div>
+                        <div class="partner-card">
+                            <span class="partner-logo">💡</span>
+                            <h4 class="partner-name">EV Connect</h4>
+                            <p class="partner-type">Software</p>
+                            <p class="partner-description">Soluciones de gestión de flotas eléctricas</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Media Partners -->
+                <div class="category-section">
+                    <h3 class="category-title">Partners de Medios</h3>
+                    <div class="partners-grid">
+                        <div class="partner-card">
+                            <span class="partner-logo">📰</span>
+                            <h4 class="partner-name">AutoNews LATAM</h4>
+                            <p class="partner-type">Medio Automotriz</p>
+                            <p class="partner-description">Noticias sobre industria automotriz regional</p>
+                        </div>
+                        <div class="partner-card">
+                            <span class="partner-logo">🎙️</span>
+                            <h4 class="partner-name">EcoTech Podcast</h4>
+                            <p class="partner-type">Podcast</p>
+                            <p class="partner-description">Tecnología y sostenibilidad ambiental</p>
+                        </div>
+                        <div class="partner-card">
+                            <span class="partner-logo">📱</span>
+                            <h4 class="partner-name">Digital Trends ES</h4>
+                            <p class="partner-type">Portal Digital</p>
+                            <p class="partner-description">Tecnología y innovación en español</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Benefits -->
+        <div class="benefits-section">
+            <h2 class="section-title">Beneficios de ser Partner</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">🎯</div>
+                    <h4>Visibilidad Amplificada</h4>
+                    <p>Acceso a nuestra audiencia comprometida de más de 250K lectores mensuales especializados en movilidad</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🤝</div>
+                    <h4>Co-creación de Valor</h4>
+                    <p>Desarrollo conjunto de proyectos, contenidos y soluciones innovadoras para el sector</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🌐</div>
+                    <h4>Red Regional</h4>
+                    <p>Conexión con otros líderes y organizaciones clave del ecosistema de movilidad en 18 países</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">📈</div>
+                    <h4>Insights de Mercado</h4>
+                    <p>Acceso a investigaciones, tendencias y análisis exclusivos sobre el mercado latinoamericano</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🎤</div>
+                    <h4>Thought Leadership</h4>
+                    <p>Plataforma para compartir tu experiencia y posicionarte como líder de opinión en el sector</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🚀</div>
+                    <h4>Innovación Continua</h4>
+                    <p>Participación en hackathons, laboratorios de ideas y proyectos piloto de vanguardia</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Success Stories -->
+        <div class="success-stories">
+            <h2 class="section-title">Casos de Éxito</h2>
+            <p class="section-subtitle">Resultados tangibles de nuestras alianzas estratégicas</p>
+            
+            <div class="stories-grid">
+                <div class="story-card">
+                    <div class="story-header">
+                        <h3 class="story-partner">Green Transport Alliance</h3>
+                        <p class="story-tagline">Campaña de Concientización Regional</p>
+                    </div>
+                    <div class="story-content">
+                        <p>Colaboramos en una campaña multiplataforma para educar sobre los beneficios de la electromovilidad, alcanzando a más de 2 millones de personas en 12 países.</p>
+                        <div class="story-stats">
+                            <div class="stat">
+                                <span class="stat-value">2M+</span>
+                                <span class="stat-label">Impresiones</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">45%</span>
+                                <span class="stat-label">Engagement</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-header">
+                        <h3 class="story-partner">Instituto Tecnológico</h3>
+                        <p class="story-tagline">Estudio de Adopción de EVs</p>
+                    </div>
+                    <div class="story-content">
+                        <p>Proyecto de investigación conjunto sobre barreras y facilitadores para la adopción de vehículos eléctricos en México, generando insights clave para policy makers.</p>
+                        <div class="story-stats">
+                            <div class="stat">
+                                <span class="stat-value">5K+</span>
+                                <span class="stat-label">Encuestados</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">15</span>
+                                <span class="stat-label">Publicaciones</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-header">
+                        <h3 class="story-partner">ChargeMap</h3>
+                        <p class="story-tagline">Mapa Interactivo de Carga</p>
+                    </div>
+                    <div class="story-content">
+                        <p>Desarrollo e integración de un mapa interactivo de estaciones de carga en nuestra plataforma, mejorando la experiencia de conductores de EVs en la región.</p>
+                        <div class="story-stats">
+                            <div class="stat">
+                                <span class="stat-value">3K+</span>
+                                <span class="stat-label">Estaciones</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">80K</span>
+                                <span class="stat-label">Usuarios/mes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Application Process -->
+        <div class="process-section">
+            <h2 class="section-title">Cómo Convertirse en Partner</h2>
+            <p class="section-subtitle">Un proceso simple y transparente para iniciar nuestra colaboración</p>
+            
+            <div class="process-steps">
+                <div class="step-card">
+                    <span class="step-number">1</span>
+                    <h4>Solicitud Inicial</h4>
+                    <p>Completa nuestro formulario con información sobre tu organización y el tipo de partnership que buscas.</p>
+                </div>
+
+                <div class="step-card">
+                    <span class="step-number">2</span>
+                    <h4>Evaluación</h4>
+                    <p>Nuestro equipo revisa tu propuesta y evalúa la alineación estratégica con nuestra misión y valores.</p>
+                </div>
+
+                <div class="step-card">
+                    <span class="step-number">3</span>
+                    <h4>Reunión Exploratoria</h4>
+                    <p>Conversación para entender mejor tus objetivos y explorar oportunidades de colaboración mutua.</p>
+                </div>
+
+                <div class="step-card">
+                    <span class="step-number">4</span>
+                    <h4>Propuesta de Valor</h4>
+                    <p>Desarrollamos conjuntamente un plan de partnership que beneficie a ambas partes.</p>
+                </div>
+
+                <div class="step-card">
+                    <span class="step-number">5</span>
+                    <h4>Formalización</h4>
+                    <p>Firma de acuerdo de partnership y definición de métricas de éxito y plan de trabajo.</p>
+                </div>
+
+                <div class="step-card">
+                    <span class="step-number">6</span>
+                    <h4>Lanzamiento</h4>
+                    <p>Inicio oficial del partnership con anuncio público y activación de primeras iniciativas conjuntas.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-section">
+            <h2>¿Listo para Construir Juntos el Futuro?</h2>
+            <p>Conectemos y exploremos cómo podemos colaborar para transformar la movilidad en América Latina</p>
+            <a href="contacto.html" class="cta-button">Solicitar Partnership</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 MOVILIAX. Todos los derechos reservados. | 
+            <a href="privacidad.html">Privacidad</a> | 
+            <a href="terminos.html">Términos</a> | 
+            <a href="contacto.html">Contacto</a> | 
+            <a href="equipo.html">Equipo</a>
+        </p>
+    </footer>
+</body>
+</html>

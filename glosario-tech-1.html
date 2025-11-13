@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MOVILIAX - Glosario Tech Completo. Términos de tecnología, movilidad y logística explicados de forma clara y concisa.">
+    <meta name="keywords" content="glosario tech, tecnología, movilidad, logística, vehículos eléctricos, ciudades inteligentes">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Glosario Tech - MOVILIAX">
+    <meta property="og:description" content="Glosario completo de términos de tecnología, movilidad y logística">
+    <meta property="og:type" content="website">
+    
+    <title>Glosario Tech - MOVILIAX</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --azul-profundo: #0A0F2C;
+            --cian-electrico: #00E0FF;
+            --gris-metalico: #7A7F8C;
+            --blanco: #FFFFFF;
+            --negro-carbon: #0D0D0D;
+            --violeta-tech: #6B46FF;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--azul-profundo);
+            color: var(--blanco);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Scroll suave */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 15, 44, 0.85);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 224, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            background: rgba(10, 15, 44, 0.98);
+            box-shadow: 0 10px 40px rgba(0, 224, 255, 0.1);
+            padding: 5px 0;
+        }
+
+        nav {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 25px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: padding 0.3s ease;
+        }
+
+        header.scrolled nav {
+            padding: 15px 60px;
+        }
+
+        .logo {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 32px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            color: var(--blanco);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            text-decoration: none;
+        }
+
+        .logo-x {
+            color: var(--cian-electrico);
+            position: relative;
+            display: inline-block;
+            animation: pulse 2s ease-in-out infinite;
+            filter: drop-shadow(0 0 10px var(--cian-electrico));
+        }
+
+        @keyframes pulse {
+            0%, 100% { 
+                text-shadow: 0 0 10px var(--cian-electrico);
+                transform: scale(1);
+            }
+            50% { 
+                text-shadow: 0 0 30px var(--cian-electrico), 0 0 40px var(--cian-electrico);
+                transform: scale(1.05);
+            }
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            z-index: 1001;
+        }
+
+        .menu-toggle span {
+            width: 30px;
+            height: 3px;
+            background: var(--blanco);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 50px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--blanco);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s;
+            position: relative;
+            padding: 8px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a:hover {
+            color: var(--cian-electrico);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--cian-electrico), transparent);
+            transition: width 0.4s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            padding: 12px 28px !important;
+            background: linear-gradient(135deg, var(--cian-electrico), #0099cc);
+            color: var(--azul-profundo) !important;
+            border-radius: 30px;
+            font-weight: 700;
+            transition: all 0.3s;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 224, 255, 0.4);
+        }
+
+        .nav-cta::after {
+            display: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background: radial-gradient(ellipse at center, #1a1f4a 0%, var(--azul-profundo) 70%);
+            padding: 180px 20px 100px;
+        }
+
+        .hero-particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: var(--cian-electrico);
+            border-radius: 50%;
+            animation: float 20s infinite;
+            opacity: 0.3;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            25% { transform: translate(100px, -100px); }
+            50% { transform: translate(-100px, -200px); }
+            75% { transform: translate(50px, -150px); }
+        }
+
+        .hero-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 224, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 224, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: clamp(48px, 8vw, 90px);
+            font-weight: 900;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, var(--cian-electrico), var(--violeta-tech));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s ease-out;
+            line-height: 1.1;
+        }
+
+        .hero-content p {
+            font-size: clamp(18px, 2.5vw, 24px);
+            color: var(--gris-metalico);
+            margin-bottom: 40px;
+            animation: fadeInUp 1s ease-out 0.2s both;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Search Section */
+        .search-section {
+            position: relative;
+            z-index: 1;
+            padding: 40px 60px;
+            background: rgba(10, 15, 44, 0.5);
+            border-bottom: 1px solid rgba(0, 224, 255, 0.2);
+        }
+
+        .search-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 20px 60px 20px 25px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(0, 224, 255, 0.3);
+            border-radius: 50px;
+            color: var(--blanco);
+            font-size: 18px;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s;
+            outline: none;
+        }
+
+        .search-input:focus {
+            border-color: var(--cian-electrico);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 30px rgba(0, 224, 255, 0.2);
+        }
+
+        .search-input::placeholder {
+            color: var(--gris-metalico);
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--cian-electrico);
+            font-size: 20px;
+            pointer-events: none;
+        }
+
+        /* Alphabet Navigation */
+        .alphabet-nav {
+            position: sticky;
+            top: 80px;
+            background: rgba(10, 15, 44, 0.98);
+            backdrop-filter: blur(20px);
+            padding: 20px 60px;
+            border-bottom: 1px solid rgba(0, 224, 255, 0.2);
+            z-index: 999;
+            overflow-x: auto;
+        }
+
+        .alphabet-links {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .alphabet-links a {
+            color: var(--gris-metalico);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            padding: 10px 16px;
+            border-radius: 10px;
+            transition: all 0.3s;
+            border: 1px solid transparent;
+            font-family: 'Exo 2', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        .alphabet-links a:hover,
+        .alphabet-links a.active {
+            color: var(--cian-electrico);
+            border-color: var(--cian-electrico);
+            background: rgba(0, 224, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Content Section */
+        .glossary-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 80px 60px 120px;
+        }
+
+        .letter-section {
+            margin-bottom: 100px;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .letter-header {
+            font-family: 'Exo 2', sans-serif;
+            font-size: clamp(48px, 8vw, 72px);
+            font-weight: 900;
+            color: var(--cian-electrico);
+            margin-bottom: 50px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid rgba(0, 224, 255, 0.3);
+            text-shadow: 0 0 40px rgba(0, 224, 255, 0.4);
+            position: relative;
+        }
+
+        .letter-header::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--cian-electrico), transparent);
+        }
+
+        .terms-grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        .term-entry {
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.02);
+            border-left: 4px solid var(--cian-electrico);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .term-entry::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 224, 255, 0.05), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+        }
+
+        .term-entry:hover {
+            background: rgba(0, 224, 255, 0.05);
+            border-left-width: 6px;
+            transform: translateX(8px);
+            box-shadow: 0 10px 40px rgba(0, 224, 255, 0.1);
+        }
+
+        .term-entry:hover::before {
+            opacity: 1;
+        }
+
+        .term-title {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--blanco);
+            margin-bottom: 12px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .term-description {
+            color: var(--gris-metalico);
+            font-size: 16px;
+            line-height: 1.8;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(13, 13, 13, 0.95);
+            padding: 60px 60px 40px;
+            text-align: center;
+            border-top: 1px solid rgba(0, 224, 255, 0.2);
+        }
+
+        footer p {
+            color: var(--gris-metalico);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        footer a {
+            color: var(--gris-metalico);
+            text-decoration: none;
+            transition: color 0.3s;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: var(--cian-electrico);
+        }
+
+        /* Back to Top Button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--cian-electrico), var(--violeta-tech));
+            color: var(--azul-profundo);
+            border: none;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 999;
+            box-shadow: 0 10px 30px rgba(0, 224, 255, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+
+        .scroll-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 224, 255, 0.5);
+        }
+
+        /* Fade In Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            nav, .glossary-content, .search-section, footer {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background: rgba(10, 15, 44, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                padding: 120px 40px 40px;
+                gap: 30px;
+                transition: right 0.4s ease;
+                border-left: 1px solid rgba(0, 224, 255, 0.2);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .hero {
+                padding: 160px 20px 80px;
+            }
+
+            nav, .glossary-content, .search-section, .alphabet-nav, footer {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .letter-header {
+                font-size: 48px;
+            }
+
+            .alphabet-links {
+                justify-content: flex-start;
+                gap: 10px;
+            }
+
+            .alphabet-links a {
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <a href="index.html" class="logo">
+                MOVILIA<span class="logo-x">X</span>
+            </a>
+            
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#contenido">Contenido</a></li>
+                <li><a href="index.html#por-que">Por Qué</a></li>
+                <li><a href="glosario-tech.html">Glosario</a></li>
+                <li><a href="index.html#newsletter" class="nav-cta">Newsletter</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-grid"></div>
+        
+        <div class="hero-content">
+            <h1>Glosario Tech</h1>
+            <p>Tu referencia completa de términos de tecnología, movilidad y logística. Explora conceptos clave que están transformando el futuro del transporte.</p>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="search-container">
+            <input 
+                type="text" 
+                id="searchInput" 
+                class="search-input" 
+                placeholder="Buscar término o concepto..."
+                autocomplete="off"
+            >
+            <span class="search-icon">🔍</span>
+        </div>
+    </section>
+
+    <!-- Alphabet Navigation -->
+    <nav class="alphabet-nav">
+        <div class="alphabet-links">
+            <a href="#A">A</a>
+            <a href="#B">B</a>
+            <a href="#C">C</a>
+            <a href="#D">D</a>
+            <a href="#E">E</a>
+            <a href="#F">F</a>
+            <a href="#G">G</a>
+            <a href="#H">H</a>
+            <a href="#I">I</a>
+            <a href="#J">J</a>
+            <a href="#K">K</a>
+            <a href="#L">L</a>
+            <a href="#M">M</a>
+            <a href="#N">N</a>
+            <a href="#O">O</a>
+            <a href="#P">P</a>
+            <a href="#Q">Q</a>
+            <a href="#R">R</a>
+            <a href="#S">S</a>
+            <a href="#T">T</a>
+            <a href="#U">U</a>
+            <a href="#V">V</a>
+            <a href="#W">W</a>
+            <a href="#X">X</a>
+            <a href="#Y">Y</a>
+            <a href="#Z">Z</a>
+        </div>
+    </nav>
+
+    <!-- Glossary Content -->
+    <div class="glossary-content">
+
+        <!-- Letter A -->
+        <div class="letter-section fade-in" id="A">
+            <h2 class="letter-header">A</h2>
+            <div class="terms-grid">
+                <div class="term-entry">
+                    <div class="term-title">AI (Artificial Intelligence)</div>
+                    <div class="term-description">Simulación de inteligencia humana en máquinas programadas para pensar y aprender como humanos.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">API (Application Programming Interface)</div>
+                    <div class="term-description">Conjunto de reglas y protocolos que permite a diferentes aplicaciones de software comunicarse entre sí.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Autonomous Vehicle</div>
+                    <div class="term-description">Vehículo capaz de detectar su entorno y operar sin intervención humana usando sensores, cámaras y AI.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">ADAS (Advanced Driver Assistance Systems)</div>
+                    <div class="term-description">Tecnologías de seguridad vehicular que alertan al conductor sobre peligros potenciales o toman acciones correctivas.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Letter B -->
+        <div class="letter-section fade-in" id="B">
+            <h2 class="letter-header">B</h2>
+            <div class="terms-grid">
+                <div class="term-entry">
+                    <div class="term-title">Battery Electric Vehicle (BEV)</div>
+                    <div class="term-description">Vehículo totalmente eléctrico impulsado únicamente por baterías recargables, sin motor de combustión.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Blockchain</div>
+                    <div class="term-description">Tecnología de registro distribuido que mantiene lista segura y descentralizada de registros (bloques) vinculados mediante criptografía.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Big Data</div>
+                    <div class="term-description">Conjuntos de datos extremadamente grandes que pueden ser analizados para revelar patrones, tendencias y asociaciones.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">B2B (Business-to-Business)</div>
+                    <div class="term-description">Transacciones o comunicación entre empresas, en lugar de entre empresa y consumidor individual.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Letter C -->
+        <div class="letter-section fade-in" id="C">
+            <h2 class="letter-header">C</h2>
+            <div class="terms-grid">
+                <div class="term-entry">
+                    <div class="term-title">Cloud Computing</div>
+                    <div class="term-description">Entrega de servicios informáticos (servidores, almacenamiento, bases de datos) por internet bajo demanda.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Connected Vehicle</div>
+                    <div class="term-description">Vehículo equipado con acceso a internet y red inalámbrica LAN que puede compartir datos con dispositivos externos.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Cross-Docking</div>
+                    <div class="term-description">Práctica logística donde productos se descargan de vehículos entrantes y cargan directamente en salientes con almacenamiento mínimo.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Charging Infrastructure</div>
+                    <div class="term-description">Red de estaciones y puntos de carga para vehículos eléctricos en ubicaciones públicas y privadas.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Letter D -->
+        <div class="letter-section fade-in" id="D">
+            <h2 class="letter-header">D</h2>
+            <div class="terms-grid">
+                <div class="term-entry">
+                    <div class="term-title">Digital Twin</div>
+                    <div class="term-description">Réplica virtual de objeto físico, proceso o sistema usado para simulación, análisis y optimización.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Delivery Management System</div>
+                    <div class="term-description">Software que optimiza proceso de entrega planificando rutas, rastreando envíos y gestionando comunicación con clientes.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Data Analytics</div>
+                    <div class="term-description">Proceso de examinar conjuntos de datos para extraer conclusiones sobre información que contienen.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Dynamic Pricing</div>
+                    <div class="term-description">Estrategia donde precios fluctúan basándose en demanda del mercado en tiempo real, disponibilidad y otros factores.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Letter E -->
+        <div class="letter-section fade-in" id="E">
+            <h2 class="letter-header">E</h2>
+            <div class="terms-grid">
+                <div class="term-entry">
+                    <div class="term-title">Electric Vehicle (EV)</div>
+                    <div class="term-description">Vehículo que funciona con uno o más motores eléctricos usando energía de baterías recargables.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Edge Computing</div>
+                    <div class="term-description">Computación distribuida que acerca cálculo y almacenamiento de datos a ubicación donde se necesita.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">E-commerce</div>
+                    <div class="term-description">Compra y venta de bienes o servicios usando internet, transfiriendo dinero y datos para ejecutar transacciones.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">ETA (Estimated Time of Arrival)</div>
+                    <div class="term-description">Tiempo previsto en que vehículo, envío o persona llegará a destino.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Letter F -->
+        <div class="letter-section fade-in" id="F">
+            <h2 class="letter-header">F</h2>
+            <div class="terms-grid">
+                <div class="term-entry">
+                    <div class="term-title">Fleet Management</div>
+                    <div class="term-description">Proceso de organizar y coordinar vehículos de trabajo para maximizar eficiencia y productividad.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">First-Mile Delivery</div>
+                    <div class="term-description">Segmento inicial de proceso de entrega desde ubicación hasta primer punto de consolidación.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Fuel Cell</div>
+                    <div class="term-description">Dispositivo que convierte energía química en electricidad mediante reacción electroquímica, típicamente usando hidrógeno.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Letter G -->
+        <div class="letter-section fade-in" id="G">
+            <h2 class="letter-header">G</h2>
+            <div class="terms-grid">
+                <div class="term-entry">
+                    <div class="term-title">GPS (Global Positioning System)</div>
+                    <div class="term-description">Sistema de navegación por satélite que proporciona información de ubicación y tiempo en cualquier condición.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Geofencing</div>
+                    <div class="term-description">Uso de GPS o RFID para crear límite virtual alrededor de ubicación geográfica que desencadena respuesta.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Green Logistics</div>
+                    <div class="term-description">Prácticas logísticas sostenibles que minimizan impacto ambiental de actividades de cadena de suministro.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Gig Economy</div>
+                    <div class="term-description">Mercado laboral caracterizado por prevalencia de contratos a corto plazo o trabajo independiente.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Letter H -->
+        <div class="letter-section fade-in" id="H">
+            <h2 class="letter-header">H</h2>
+            <div class="terms-grid">
+                <div class="term-entry">
+                    <div class="term-title">Hybrid Vehicle</div>
+                    <div class="term-description">Vehículo que combina motor de combustión interna con sistema de propulsión eléctrica.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">HMI (Human-Machine Interface)</div>
+                    <div class="term-description">Interfaz de usuario que conecta operador con máquina, permitiendo comunicación y control efectivos.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Hub</div>
+                    <div class="term-description">Instalación central donde mercancías se clasifican y redistribuyen para entrega final.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Letter I -->
+        <div class="letter-section fade-in" id="I">
+            <h2 class="letter-header">I</h2>
+            <div class="terms-grid">
+                <div class="term-entry">
+                    <div class="term-title">IoT (Internet of Things)</div>
+                    <div class="term-description">Red de dispositivos físicos conectados a internet, recopilando y compartiendo datos.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Intermodal Transportation</div>
+                    <div class="term-description">Uso de dos o más modos de transporte para mover carga desde origen hasta destino.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Inventory Management</div>
+                    <div class="term-description">Supervisión de flujo de artículos desde fabricantes hasta almacenes y puntos de venta.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Letter J -->
+        <div class="letter-section fade-in" id="J">
+            <h2 class="letter-header">J</h2>
+            <div class="terms-grid">
+                <div class="term-entry">
+                    <div class="term-title">Just-in-Time (JIT)</div>
+                    <div class="term-description">Estrategia de gestión de inventario donde materiales se ordenan y reciben solo cuando se necesitan.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Journey Planning</div>
+                    <div class="term-description">Proceso de determinar ruta más eficiente para viaje considerando varios modos de transporte.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Letter K -->
+        <div class="letter-section fade-in" id="K">
+            <h2 class="letter-header">K</h2>
+            <div class="terms-grid">
+                <div class="term-entry">
+                    <div class="term-title">KPI (Key Performance Indicator)</div>
+                    <div class="term-description">Valor medible que demuestra qué tan efectivamente empresa logra objetivos de negocio clave.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">kWh (Kilowatt-hour)</div>
+                    <div class="term-description">Unidad de energía equivalente a un kilovatio de potencia sostenido durante una hora.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Letter L -->
+        <div class="letter-section fade-in" id="L">
+            <h2 class="letter-header">L</h2>
+            <div class="terms-grid">
+                <div class="term-entry">
+                    <div class="term-title">Last-Mile Delivery</div>
+                    <div class="term-description">Segmento final del proceso de entrega desde centro de distribución hasta destino final.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">LiDAR (Light Detection and Ranging)</div>
+                    <div class="term-description">Método de detección remota que usa luz láser pulsada para medir distancias y crear mapas 3D.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Logistics</div>
+                    <div class="term-description">Gestión detallada de operación compleja que involucra movimiento, almacenamiento y flujo de mercancías.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Load Optimization</div>
+                    <div class="term-description">Proceso de organizar eficientemente carga en vehículo para maximizar espacio y minimizar costos.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Letter M -->
+        <div class="letter-section fade-in" id="M">
+            <h2 class="letter-header">M</h2>
+            <div class="terms-grid">
+                <div class="term-entry">
+                    <div class="term-title">MaaS (Mobility as a Service)</div>
+                    <div class="term-description">Integración de varios servicios de transporte en único servicio accesible bajo demanda.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Machine Learning</div>
+                    <div class="term-description">Subcampo de AI que permite a sistemas aprender y mejorar automáticamente de la experiencia.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Micromobility</div>
+                    <div class="term-description">Vehículos ligeros de una persona como e-scooters y e-bikes para viajes cortos.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Multimodal Transport</div>
+                    <div class="term-description">Transporte de mercancías usando múltiples modos bajo contrato único.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Letter N -->
+        <div class="letter-section fade-in" id="N">
+            <h2 class="letter-header">N</h2>
+            <div class="terms-grid">
+                <div class="term-entry">
+                    <div class="term-title">NFC (Near Field Communication)</div>
+                    <div class="term-description">Tecnología inalámbrica de corto alcance que hace posible comunicación entre dispositivos.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Network Optimization</div>
+                    <div class="term-description">Proceso de hacer red de transporte o logística más eficiente mientras reduce costos.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Letter O -->
+        <div class="letter-section fade-in" id="O">
+            <h2 class="letter-header">O</h2>
+            <div class="terms-grid">
+                <div class="term-entry">
+                    <div class="term-title">OEM (Original Equipment Manufacturer)</div>
+                    <div class="term-description">Empresa que fabrica productos o componentes comprados por otra empresa y vendidos bajo marca compradora.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">On-Demand Delivery</div>
+                    <div class="term-description">Servicio que permite a consumidores solicitar entregas inmediatas de mercancías.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">OTA (Over-the-Air)</div>
+                    <div class="term-description">Método de distribución inalámbrica de nuevas actualizaciones de software, configuración o claves.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Letter P -->
+        <div class="letter-section fade-in" id="P">
+            <h2 class="letter-header">P</h2>
+            <div class="terms-grid">
+                <div class="term-entry">
+                    <div class="term-title">Predictive Analytics</div>
+                    <div class="term-description">Uso de datos, algoritmos estadísticos y técnicas de machine learning para identificar probabilidad de resultados futuros.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Public Transit</div>
+                    <div class="term-description">Sistema de transporte disponible para uso público, típicamente operando en rutas y horarios fijos.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Plug-in Hybrid Electric Vehicle (PHEV)</div>
+                    <div class="term-description">Vehículo híbrido con batería recargable que puede cargarse conectándose a fuente externa de energía.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Letter Q -->
+        <div class="letter-section fade-in" id="Q">
+            <h2 class="letter-header">Q</h2>
+            <div class="terms-grid">
+                <div class="term-entry">
+                    <div class="term-title">QR Code (Quick Response Code)</div>
+                    <div class="term-description">Código de barras matricial legible por máquina que contiene información sobre artículo al que está adjunto.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Queue Management</div>
+                    <div class="term-description">Sistema para controlar colas o filas y gestionar flujo de clientes o vehículos.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Letter R -->
+        <div class="letter-section fade-in" id="R">
+            <h2 class="letter-header">R</h2>
+            <div class="terms-grid">
+                <div class="term-entry">
+                    <div class="term-title">RFID (Radio-Frequency Identification)</div>
+                    <div class="term-description">Tecnología que usa campos electromagnéticos para identificar y rastrear etiquetas adjuntas a objetos automáticamente.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Route Optimization</div>
+                    <div class="term-description">Proceso de determinar rutas más eficientes para vehículos considerando varios factores.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Reverse Logistics</div>
+                    <div class="term-description">Proceso de mover mercancías desde destino final típico con propósito de capturar valor o eliminación adecuada.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Ridesharing</div>
+                    <div class="term-description">Servicio donde pasajeros comparten vehículo con otros viajando en dirección similar.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Letter S -->
+        <div class="letter-section fade-in" id="S">
+            <h2 class="letter-header">S</h2>
+            <div class="terms-grid">
+                <div class="term-entry">
+                    <div class="term-title">Smart City</div>
+                    <div class="term-description">Área urbana que usa sensores electrónicos IoT para recopilar datos y gestionar activos y recursos eficientemente.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Supply Chain</div>
+                    <div class="term-description">Red entre empresa y sus proveedores para producir y distribuir producto específico al comprador final.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Sensor Fusion</div>
+                    <div class="term-description">Combinación de datos de múltiples sensores para producir información más precisa y confiable.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">SKU (Stock Keeping Unit)</div>
+                    <div class="term-description">Código único para identificar cada producto diferente en inventario.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Letter T -->
+        <div class="letter-section fade-in" id="T">
+            <h2 class="letter-header">T</h2>
+            <div class="terms-grid">
+                <div class="term-entry">
+                    <div class="term-title">TMS (Transportation Management System)</div>
+                    <div class="term-description">Software para planificar, ejecutar y optimizar movimiento físico de mercancías.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Telematics</div>
+                    <div class="term-description">Tecnología que combina telecomunicaciones e informática para monitorear vehículos y conductores remotamente.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Third-Party Logistics (3PL)</div>
+                    <div class="term-description">Proveedor externo que maneja operaciones logísticas para otras empresas.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Track and Trace</div>
+                    <div class="term-description">Capacidad de rastrear ubicación de envío y ver su historial de movimiento.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Traffic Management</div>
+                    <div class="term-description">Sistemas y estrategias para controlar y optimizar flujo vehicular en redes de transporte.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Letter U -->
+        <div class="letter-section fade-in" id="U">
+            <h2 class="letter-header">U</h2>
+            <div class="terms-grid">
+                <div class="term-entry">
+                    <div class="term-title">Urban Mobility</div>
+                    <div class="term-description">Sistemas y soluciones de transporte en áreas urbanas para mover personas y mercancías eficientemente.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">UX (User Experience)</div>
+                    <div class="term-description">Experiencia general y satisfacción del usuario al interactuar con un producto o servicio.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">UI (User Interface)</div>
+                    <div class="term-description">Medio por el cual el usuario interactúa con un dispositivo o aplicación.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Letter V -->
+        <div class="letter-section fade-in" id="V">
+            <h2 class="letter-header">V</h2>
+            <div class="terms-grid">
+                <div class="term-entry">
+                    <div class="term-title">Vehicle Tracking</div>
+                    <div class="term-description">Uso de GPS y otros dispositivos para monitorear ubicación y movimiento de vehículos en tiempo real.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">V2V (Vehicle-to-Vehicle)</div>
+                    <div class="term-description">Tecnología de comunicación que permite a vehículos intercambiar información entre sí.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">V2X (Vehicle-to-Everything)</div>
+                    <div class="term-description">Sistema de comunicación que conecta vehículos con cualquier entidad en su entorno.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">VMI (Vendor Managed Inventory)</div>
+                    <div class="term-description">Modelo donde proveedor gestiona niveles de inventario del cliente.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Letter W -->
+        <div class="letter-section fade-in" id="W">
+            <h2 class="letter-header">W</h2>
+            <div class="terms-grid">
+                <div class="term-entry">
+                    <div class="term-title">Warehouse Management System (WMS)</div>
+                    <div class="term-description">Software para controlar y gestionar operaciones diarias de almacén.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Waybill</div>
+                    <div class="term-description">Documento emitido por transportista que acompaña mercancías y muestra detalles del envío.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Wearable Technology</div>
+                    <div class="term-description">Dispositivos electrónicos que se usan en el cuerpo, útiles para rastrear actividad de conductores y trabajadores.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Letter X -->
+        <div class="letter-section fade-in" id="X">
+            <h2 class="letter-header">X</h2>
+            <div class="terms-grid">
+                <div class="term-entry">
+                    <div class="term-title">XML (eXtensible Markup Language)</div>
+                    <div class="term-description">Lenguaje de marcado para codificar documentos de forma legible para humanos y máquinas.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">X-Dock</div>
+                    <div class="term-description">Abreviatura de cross-docking, práctica de transferir mercancías directamente sin almacenamiento prolongado.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Letter Y -->
+        <div class="letter-section fade-in" id="Y">
+            <h2 class="letter-header">Y</h2>
+            <div class="terms-grid">
+                <div class="term-entry">
+                    <div class="term-title">YAML (YAML Ain't Markup Language)</div>
+                    <div class="term-description">Formato de serialización de datos legible por humanos utilizado para archivos de configuración.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Yard Management</div>
+                    <div class="term-description">Sistema para gestionar movimiento de camiones y remolques dentro de patio o instalación.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Yield Management</div>
+                    <div class="term-description">Estrategia de pricing dinámico para maximizar ingresos basándose en demanda predicha.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Letter Z -->
+        <div class="letter-section fade-in" id="Z">
+            <h2 class="letter-header">Z</h2>
+            <div class="terms-grid">
+                <div class="term-entry">
+                    <div class="term-title">Zero-Emission Vehicle (ZEV)</div>
+                    <div class="term-description">Vehículo que no produce emisiones de escape, típicamente eléctrico o de hidrógeno.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Zone Skipping</div>
+                    <div class="term-description">Estrategia logística donde envíos saltan zonas intermedias para reducir tiempo y costo de tránsito.</div>
+                </div>
+
+                <div class="term-entry">
+                    <div class="term-title">Zone Picking</div>
+                    <div class="term-description">Método de almacén donde cada trabajador es responsable de recoger productos solo de su zona asignada.</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop">↑</button>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 MOVILIAX. Todos los derechos reservados.</p>
+        <div>
+            <a href="privacidad.html">Privacidad</a>
+            <a href="terminos.html">Términos</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="equipo.html">Equipo</a>
+        </div>
+    </footer>
+
+    <script>
+        // ============================================
+        // MOBILE MENU TOGGLE
+        // ============================================
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // ============================================
+        // HEADER SCROLL EFFECT
+        // ============================================
+        const header = document.getElementById('header');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // ============================================
+        // SCROLL TO TOP BUTTON
+        // ============================================
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 500) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // ============================================
+        // PARTICLES ANIMATION
+        // ============================================
+        const particlesContainer = document.getElementById('particles');
+        const particleCount = 50;
+
+        function createParticles() {
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Random position
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                
+                // Random animation delay and duration
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 15) + 's';
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        createParticles();
+
+        // ============================================
+        // SEARCH FUNCTIONALITY
+        // ============================================
+        const searchInput = document.getElementById('searchInput');
+        const termEntries = document.querySelectorAll('.term-entry');
+        const letterSections = document.querySelectorAll('.letter-section');
+
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            
+            termEntries.forEach(entry => {
+                const title = entry.querySelector('.term-title').textContent.toLowerCase();
+                const description = entry.querySelector('.term-description').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    entry.style.display = 'block';
+                } else {
+                    entry.style.display = 'none';
+                }
+            });
+
+            // Hide/show letter sections if all terms are hidden
+            letterSections.forEach(section => {
+                const visibleTerms = section.querySelectorAll('.term-entry[style="display: block;"], .term-entry:not([style*="display: none"])');
+                section.style.display = visibleTerms.length > 0 ? 'block' : 'none';
+            });
+        });
+
+        // ============================================
+        // INTERSECTION OBSERVER FOR FADE-IN ANIMATIONS
+        // ============================================
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Unobserve after animation to improve performance
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(element => {
+            observer.observe(element);
+        });
+
+        // ============================================
+        // SMOOTH SCROLL FOR ANCHOR LINKS
+        // ============================================
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                
+                // Don't prevent default for empty anchors
+                if (href === '#') return;
+                
+                e.preventDefault();
+                const target = document.querySelector(href);
+                
+                if (target) {
+                    const headerHeight = header.offsetHeight;
+                    const alphabetNavHeight = document.querySelector('.alphabet-nav').offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight - alphabetNavHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // ============================================
+        // ACTIVE ALPHABET LINK HIGHLIGHTING
+        // ============================================
+        const alphabetLinks = document.querySelectorAll('.alphabet-links a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            letterSections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            alphabetLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // ============================================
+        // CONSOLE EASTER EGG
+        // ============================================
+        console.log('%c🚀 MOVILIAX', 'font-size: 40px; color: #00E0FF; font-weight: bold;');
+        console.log('%c¿Interesado en trabajar con nosotros?', 'font-size: 16px; color: #7A7F8C;');
+        console.log('%cEnvía tu CV a: jobs@moviliax.com', 'font-size: 14px; color: #00E0FF;');
+    </script>
+</body>
+</html>

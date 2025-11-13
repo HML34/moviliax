@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Términos y Condiciones de Uso de MOVILIAX - Reglas y directrices para el uso de nuestros servicios">
+    <title>Términos y Condiciones - MOVILIAX</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --azul-profundo: #0A0F2C;
+            --cian-electrico: #00E0FF;
+            --gris-metalico: #7A7F8C;
+            --blanco: #FFFFFF;
+            --negro-carbon: #0D0D0D;
+            --violeta-tech: #6B46FF;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--azul-profundo);
+            color: var(--blanco);
+            overflow-x: hidden;
+            line-height: 1.8;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 15, 44, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 224, 255, 0.2);
+        }
+
+        nav {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 28px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            color: var(--blanco);
+            text-decoration: none;
+        }
+
+        .logo-x {
+            color: var(--cian-electrico);
+            filter: drop-shadow(0 0 10px var(--cian-electrico));
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--blanco);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a:hover {
+            color: var(--cian-electrico);
+        }
+
+        /* Hero Section */
+        .page-hero {
+            min-height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(ellipse at center, #1a1f4a 0%, var(--azul-profundo) 70%);
+            padding: 150px 20px 60px;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, var(--blanco) 0%, var(--cian-electrico) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-content p {
+            font-size: 16px;
+            color: var(--gris-metalico);
+        }
+
+        /* Content Section */
+        .content-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 40px 100px;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: var(--cian-electrico);
+            font-weight: 600;
+            margin-bottom: 40px;
+            padding: 15px;
+            background: rgba(0, 224, 255, 0.05);
+            border-radius: 10px;
+            border: 1px solid rgba(0, 224, 255, 0.2);
+        }
+
+        .intro-text {
+            background: rgba(107, 70, 255, 0.1);
+            border-left: 4px solid var(--violeta-tech);
+            padding: 25px;
+            margin-bottom: 40px;
+            border-radius: 5px;
+        }
+
+        .intro-text p {
+            margin-bottom: 0;
+            font-size: 16px;
+        }
+
+        .content-section h2 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 28px;
+            color: var(--cian-electrico);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(0, 224, 255, 0.3);
+        }
+
+        .content-section h3 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 22px;
+            color: var(--blanco);
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .content-section p {
+            color: var(--gris-metalico);
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .content-section ul, 
+        .content-section ol {
+            color: var(--gris-metalico);
+            margin-bottom: 20px;
+            padding-left: 30px;
+        }
+
+        .content-section li {
+            margin-bottom: 12px;
+            line-height: 1.8;
+        }
+
+        .content-section strong {
+            color: var(--blanco);
+            font-weight: 600;
+        }
+
+        .warning-box {
+            background: rgba(255, 100, 50, 0.1);
+            border: 1px solid rgba(255, 100, 50, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .warning-box h4 {
+            color: #ff6432;
+            margin-bottom: 10px;
+            font-family: 'Exo 2', sans-serif;
+        }
+
+        .info-box {
+            background: rgba(0, 224, 255, 0.05);
+            border-left: 4px solid var(--cian-electrico);
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 5px;
+        }
+
+        .contact-box {
+            background: rgba(107, 70, 255, 0.1);
+            border: 1px solid rgba(107, 70, 255, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .contact-box h3 {
+            margin-top: 0;
+            color: var(--violeta-tech);
+        }
+
+        .contact-box a {
+            color: var(--cian-electrico);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 40px 60px;
+            text-align: center;
+            border-top: 1px solid rgba(0, 224, 255, 0.2);
+        }
+
+        footer p {
+            color: var(--gris-metalico);
+            font-size: 14px;
+        }
+
+        footer a {
+            color: var(--cian-electrico);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--blanco);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 36px;
+            }
+
+            .content-section {
+                padding: 40px 25px 80px;
+            }
+
+            .content-section h2 {
+                font-size: 24px;
+            }
+
+            nav {
+                padding: 20px 30px;
+            }
+
+            .nav-links {
+                gap: 20px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">MOVILI<span class="logo-x">A</span>X</a>
+            <ul class="nav-links">
+                <li><a href="index.html#contenido">Contenido</a></li>
+                <li><a href="equipo.html">Equipo</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="hero-content">
+            <h1>Términos y Condiciones</h1>
+            <p>Términos de uso de nuestros servicios</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="last-updated">
+            <strong>Última actualización:</strong> 2 de noviembre de 2025
+        </div>
+
+        <div class="intro-text">
+            <p><strong>Bienvenido a MOVILIAX.</strong> Estos Términos y Condiciones de Uso establecen las reglas y regulaciones para el uso de nuestro sitio web y servicios. Al acceder o usar MOVILIAX, aceptas estar sujeto a estos términos. Si no estás de acuerdo con alguna parte de estos términos, no debes usar nuestros servicios.</p>
+        </div>
+
+        <h2>1. Aceptación de los Términos</h2>
+        <p>Al acceder, navegar o utilizar el sitio web de MOVILIAX (en adelante, "el Sitio"), o cualquier servicio, contenido o funcionalidad disponible a través del mismo, aceptas cumplir y estar sujeto a estos Términos y Condiciones, así como a nuestra <a href="privacidad.html" style="color: var(--cian-electrico);">Política de Privacidad</a>.</p>
+        <p>Nos reservamos el derecho de modificar estos términos en cualquier momento. Las modificaciones entrarán en vigor inmediatamente después de su publicación en el Sitio. Tu uso continuado del Sitio después de cualquier cambio constituye tu aceptación de los nuevos términos.</p>
+
+        <h2>2. Descripción del Servicio</h2>
+        <p>MOVILIAX es una plataforma digital especializada en contenido sobre movilidad sostenible, vehículos eléctricos, ciudades inteligentes y transporte del futuro en América Latina. Nuestros servicios incluyen:</p>
+        <ul>
+            <li>Artículos, análisis y reportajes sobre movilidad sostenible</li>
+            <li>Noticias y actualizaciones sobre vehículos eléctricos</li>
+            <li>Guías, reseñas y comparativas de EVs</li>
+            <li>Información sobre políticas públicas y tendencias del sector</li>
+            <li>Boletines informativos por correo electrónico</li>
+            <li>Contenido multimedia (videos, infografías, podcasts)</li>
+        </ul>
+
+        <h2>3. Uso Aceptable</h2>
+        <h3>3.1 Licencia de Uso</h3>
+        <p>Te otorgamos una licencia limitada, no exclusiva, no transferible y revocable para acceder y usar el Sitio para fines personales y no comerciales, de acuerdo con estos términos.</p>
+
+        <h3>3.2 Restricciones de Uso</h3>
+        <p>Al utilizar nuestros servicios, te comprometes a NO:</p>
+        <ul>
+            <li>Usar el Sitio para fines ilegales o no autorizados</li>
+            <li>Copiar, modificar, distribuir o explotar comercialmente nuestro contenido sin autorización escrita</li>
+            <li>Realizar ingeniería inversa, descompilar o intentar extraer el código fuente del Sitio</li>
+            <li>Recopilar información de otros usuarios sin su consentimiento</li>
+            <li>Transmitir virus, malware o cualquier código malicioso</li>
+            <li>Interferir con la seguridad o funcionamiento del Sitio</li>
+            <li>Crear cuentas fraudulentas o proporcionar información falsa</li>
+            <li>Enviar spam, contenido no solicitado o realizar actividades de phishing</li>
+            <li>Hacerse pasar por otra persona o entidad</li>
+            <li>Acosar, abusar o dañar a otros usuarios</li>
+        </ul>
+
+        <h2>4. Propiedad Intelectual</h2>
+        <h3>4.1 Derechos de MOVILIAX</h3>
+        <p>Todo el contenido del Sitio, incluyendo pero no limitado a texto, gráficos, logotipos, iconos, imágenes, clips de audio, descargas digitales, compilaciones de datos y software, es propiedad de MOVILIAX o de sus proveedores de contenido y está protegido por leyes de derechos de autor internacionales y de América Latina.</p>
+        <p>El nombre "MOVILIAX", el logotipo y todas las marcas relacionadas son marcas comerciales o marcas registradas de MOVILIAX. No puedes usar estas marcas sin nuestro permiso previo por escrito.</p>
+
+        <h3>4.2 Uso del Contenido</h3>
+        <div class="info-box">
+            <p><strong>Contenido Editorial:</strong> Puedes citar extractos breves de nuestros artículos para fines de crítica, comentario o información, siempre que proporciones la atribución adecuada y un enlace al artículo original.</p>
+        </div>
+        <p>Para cualquier otro uso, incluyendo reproducción, distribución o modificación de nuestro contenido, debes obtener permiso explícito contactándonos en <a href="mailto:info@moviliax.com" style="color: var(--cian-electrico);">info@moviliax.com</a>.</p>
+
+        <h3>4.3 Contenido Generado por Usuarios</h3>
+        <p>Al enviar comentarios, sugerencias o cualquier contenido a MOVILIAX, otorgas a MOVILIAX una licencia mundial, no exclusiva, libre de regalías, perpetua e irrevocable para usar, reproducir, modificar, adaptar, publicar y distribuir dicho contenido en cualquier medio.</p>
+
+        <h2>5. Enlaces a Terceros</h2>
+        <p>Nuestro Sitio puede contener enlaces a sitios web de terceros que no están bajo nuestro control. No somos responsables del contenido, políticas de privacidad o prácticas de sitios web de terceros. Reconoces y aceptas que MOVILIAX no será responsable, directa o indirectamente, por cualquier daño o pérdida causada o supuestamente causada por o en conexión con el uso de tales sitios.</p>
+
+        <h2>6. Exactitud del Contenido</h2>
+        <p>Nos esforzamos por proporcionar información precisa y actualizada sobre movilidad sostenible y vehículos eléctricos. Sin embargo:</p>
+        <div class="warning-box">
+            <h4>⚠️ Aviso Importante</h4>
+            <p>El contenido del Sitio se proporciona "tal cual" y únicamente con fines informativos. No garantizamos la exactitud, integridad o actualidad de cualquier información. Las especificaciones, precios y disponibilidad de vehículos pueden cambiar sin previo aviso.</p>
+        </div>
+        <p>No proporcionamos asesoramiento financiero, legal o profesional. Debes consultar con profesionales calificados antes de tomar decisiones importantes basadas en nuestro contenido.</p>
+
+        <h2>7. Privacidad y Datos Personales</h2>
+        <p>El uso que hacemos de tu información personal está regido por nuestra <a href="privacidad.html" style="color: var(--cian-electrico);">Política de Privacidad</a>. Al usar nuestros servicios, consientes la recopilación y uso de tu información según se describe en dicha política.</p>
+
+        <h2>8. Boletines y Comunicaciones</h2>
+        <p>Al suscribirte a nuestro boletín informativo:</p>
+        <ul>
+            <li>Aceptas recibir correos electrónicos periódicos con contenido, noticias y actualizaciones de MOVILIAX</li>
+            <li>Puedes cancelar tu suscripción en cualquier momento haciendo clic en el enlace de "Cancelar suscripción" en cualquier email</li>
+            <li>No compartiremos tu dirección de correo electrónico con terceros sin tu consentimiento</li>
+            <li>Cumpliremos con todas las leyes aplicables de marketing por correo electrónico</li>
+        </ul>
+
+        <h2>9. Contenido Publicitario y Patrocinado</h2>
+        <p>Nuestro Sitio puede incluir contenido publicitario o patrocinado. Nos comprometemos a:</p>
+        <ul>
+            <li>Identificar claramente el contenido patrocinado</li>
+            <li>Mantener independencia editorial en nuestras revisiones y análisis</li>
+            <li>No permitir que las relaciones comerciales influyan en nuestra objetividad</li>
+            <li>Cumplir con las directrices de divulgación publicitaria aplicables</li>
+        </ul>
+
+        <h2>10. Limitación de Responsabilidad</h2>
+        <p>En la medida máxima permitida por la ley aplicable:</p>
+        <ul>
+            <li>MOVILIAX no será responsable por daños indirectos, incidentales, especiales, consecuentes o punitivos</li>
+            <li>No garantizamos que el Sitio esté libre de errores, virus o componentes dañinos</li>
+            <li>No somos responsables de pérdidas resultantes del uso o la imposibilidad de usar nuestros servicios</li>
+            <li>No somos responsables de decisiones de compra o inversión tomadas basándose en nuestro contenido</li>
+        </ul>
+
+        <div class="warning-box">
+            <h4>⚠️ Descargo de Responsabilidad</h4>
+            <p>El uso de nuestro Sitio y servicios es bajo tu propio riesgo. Todos los servicios se proporcionan "tal cual" sin garantías de ningún tipo, ya sean expresas o implícitas.</p>
+        </div>
+
+        <h2>11. Indemnización</h2>
+        <p>Aceptas indemnizar, defender y eximir de responsabilidad a MOVILIAX, sus afiliados, directores, empleados y agentes de cualquier reclamo, daño, obligación, pérdida, responsabilidad, costo o deuda, y gasto (incluyendo honorarios de abogados) que surja de:</p>
+        <ul>
+            <li>Tu uso y acceso al Sitio</li>
+            <li>Tu violación de estos Términos</li>
+            <li>Tu violación de cualquier derecho de terceros, incluyendo derechos de propiedad intelectual</li>
+            <li>Contenido que envíes al Sitio</li>
+        </ul>
+
+        <h2>12. Suspensión y Terminación</h2>
+        <p>Nos reservamos el derecho de suspender o terminar tu acceso al Sitio, sin previo aviso y a nuestra sola discreción, por cualquier motivo, incluyendo pero no limitado a:</p>
+        <ul>
+            <li>Violación de estos Términos</li>
+            <li>Comportamiento que consideremos dañino para otros usuarios o para MOVILIAX</li>
+            <li>Actividades fraudulentas o ilegales</li>
+            <li>Solicitud por parte de autoridades legales</li>
+        </ul>
+
+        <h2>13. Disputas y Resolución</h2>
+        <h3>13.1 Ley Aplicable</h3>
+        <p>Estos Términos se regirán e interpretarán de acuerdo con las leyes aplicables en América Latina y las regulaciones internacionales correspondientes, sin dar efecto a ningún principio de conflictos de leyes.</p>
+
+        <h3>13.2 Resolución de Disputas</h3>
+        <p>Cualquier disputa que surja de estos Términos o del uso del Sitio se resolverá primero mediante negociación de buena fe. Si no se puede resolver amistosamente, las partes acuerdan someterse a mediación antes de iniciar cualquier procedimiento legal.</p>
+
+        <h2>14. Disposiciones Generales</h2>
+        <h3>14.1 Divisibilidad</h3>
+        <p>Si cualquier disposición de estos Términos se considera inválida o inaplicable, las disposiciones restantes continuarán en pleno vigor y efecto.</p>
+
+        <h3>14.2 Acuerdo Completo</h3>
+        <p>Estos Términos, junto con nuestra Política de Privacidad, constituyen el acuerdo completo entre tú y MOVILIAX respecto al uso del Sitio.</p>
+
+        <h3>14.3 No Renuncia</h3>
+        <p>Nuestro incumplimiento en hacer cumplir cualquier derecho o disposición de estos Términos no se considerará una renuncia a tales derechos.</p>
+
+        <h3>14.4 Cesión</h3>
+        <p>No puedes ceder o transferir estos Términos, en su totalidad o en parte, sin nuestro consentimiento previo por escrito. Podemos ceder nuestros derechos bajo estos Términos sin restricciones.</p>
+
+        <h2>15. Información de Contacto</h2>
+        <p>Para cualquier pregunta sobre estos Términos y Condiciones, o para reportar violaciones, contáctanos:</p>
+
+        <div class="contact-box">
+            <h3>Contacto Legal</h3>
+            <p><strong>Email:</strong> <a href="mailto:legal@moviliax.com">legal@moviliax.com</a></p>
+            <p><strong>Email General:</strong> <a href="mailto:info@moviliax.com">info@moviliax.com</a></p>
+            <p><strong>Tiempo de respuesta:</strong> 5-7 días hábiles</p>
+        </div>
+
+        <h2>16. Reconocimiento</h2>
+        <div class="info-box">
+            <p><strong>Al usar MOVILIAX, reconoces que has leído, entendido y aceptas estar sujeto a estos Términos y Condiciones, así como a nuestra Política de Privacidad.</strong></p>
+        </div>
+
+        <p style="margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(0, 224, 255, 0.2); font-size: 14px; color: var(--gris-metalico); text-align: center;">
+            Gracias por ser parte de la comunidad MOVILIAX. Juntos estamos construyendo el futuro de la movilidad sostenible en América Latina.
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 MOVILIAX. Todos los derechos reservados. | 
+            <a href="privacidad.html">Privacidad</a> | 
+            <a href="terminos.html">Términos</a> | 
+            <a href="contacto.html">Contacto</a> | 
+            <a href="equipo.html">Equipo</a>
+        </p>
+    </footer>
+</body>
+</html>

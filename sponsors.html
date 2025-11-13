@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Oportunidades de Patrocinio en MOVILIAX - Conecta con la audiencia líder en movilidad sostenible de América Latina">
+    <title>Sponsors - MOVILIAX</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --azul-profundo: #0A0F2C;
+            --cian-electrico: #00E0FF;
+            --gris-metalico: #7A7F8C;
+            --blanco: #FFFFFF;
+            --negro-carbon: #0D0D0D;
+            --violeta-tech: #6B46FF;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--azul-profundo);
+            color: var(--blanco);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 15, 44, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 224, 255, 0.2);
+        }
+
+        nav {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 28px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            color: var(--blanco);
+            text-decoration: none;
+        }
+
+        .logo-x {
+            color: var(--cian-electrico);
+            filter: drop-shadow(0 0 10px var(--cian-electrico));
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--blanco);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a:hover {
+            color: var(--cian-electrico);
+        }
+
+        .page-hero {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(ellipse at center, #1a1f4a 0%, var(--azul-profundo) 70%);
+            padding: 150px 20px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent 40%, rgba(0, 224, 255, 0.05) 50%, transparent 60%);
+            animation: scan 8s linear infinite;
+        }
+
+        @keyframes scan {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 64px;
+            font-weight: 900;
+            margin-bottom: 25px;
+            background: linear-gradient(135deg, var(--blanco) 0%, var(--cian-electrico) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-content p {
+            font-size: 22px;
+            color: var(--gris-metalico);
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--cian-electrico);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--gris-metalico);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .content-section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 100px 60px;
+        }
+
+        .section-title {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: var(--cian-electrico);
+            text-align: center;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--gris-metalico);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+            line-height: 1.8;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 100px;
+        }
+
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(0, 224, 255, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--cian-electrico);
+            box-shadow: 0 20px 60px rgba(0, 224, 255, 0.2);
+        }
+
+        .benefit-icon {
+            font-size: 52px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .benefit-card h3 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--blanco);
+        }
+
+        .benefit-card p {
+            color: var(--gris-metalico);
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin: 60px 0 100px;
+        }
+
+        .package-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 2px solid rgba(0, 224, 255, 0.2);
+            border-radius: 25px;
+            padding: 40px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .package-card.featured {
+            border-color: var(--cian-electrico);
+            background: rgba(0, 224, 255, 0.05);
+            transform: scale(1.05);
+        }
+
+        .package-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: var(--cian-electrico);
+            box-shadow: 0 25px 70px rgba(0, 224, 255, 0.3);
+        }
+
+        .package-name {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--cian-electrico);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .package-price {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--blanco);
+            margin-bottom: 10px;
+        }
+
+        .package-price span {
+            font-size: 18px;
+            color: var(--gris-metalico);
+            font-weight: 400;
+        }
+
+        .package-features {
+            list-style: none;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .package-features li {
+            padding: 12px 0;
+            color: var(--gris-metalico);
+            border-bottom: 1px solid rgba(0, 224, 255, 0.1);
+            font-size: 14px;
+        }
+
+        .package-features li::before {
+            content: '✓';
+            color: var(--cian-electrico);
+            font-weight: 900;
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        .package-button {
+            display: inline-block;
+            padding: 15px 35px;
+            background: linear-gradient(135deg, var(--cian-electrico), #0099cc);
+            color: var(--azul-profundo);
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 14px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .package-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 224, 255, 0.4);
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 100px 40px;
+            background: linear-gradient(135deg, rgba(0, 224, 255, 0.15), rgba(107, 70, 255, 0.15));
+            border-radius: 30px;
+            margin-top: 80px;
+        }
+
+        .cta-section h2 {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 48px;
+            margin-bottom: 25px;
+        }
+
+        .cta-section p {
+            font-size: 20px;
+            color: var(--gris-metalico);
+            margin-bottom: 40px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 20px 45px;
+            background: linear-gradient(135deg, var(--cian-electrico), #0099cc);
+            color: var(--azul-profundo);
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0 10px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 224, 255, 0.4);
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 40px 60px;
+            text-align: center;
+            border-top: 1px solid rgba(0, 224, 255, 0.2);
+        }
+
+        footer p {
+            color: var(--gris-metalico);
+            font-size: 14px;
+        }
+
+        footer a {
+            color: var(--cian-electrico);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 40px; }
+            .content-section { padding: 60px 30px; }
+            .packages-grid { grid-template-columns: 1fr; }
+            .package-card.featured { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">MOVILI<span class="logo-x">A</span>X</a>
+            <ul class="nav-links">
+                <li><a href="sponsors.html">Sponsors</a></li>
+                <li><a href="partners.html">Partners</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-hero">
+        <div class="hero-content">
+            <h1>Conviértete en Sponsor</h1>
+            <p>Conecta con la audiencia más comprometida con la movilidad sostenible de América Latina</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">250K+</span>
+                    <span class="stat-label">Lectores Mensuales</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">85%</span>
+                    <span class="stat-label">Decisores de Compra</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Países LATAM</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2 class="section-title">¿Por Qué Patrocinar MOVILIAX?</h2>
+        <p class="section-subtitle">Llega a una audiencia altamente calificada comprometida con la movilidad del futuro</p>
+        
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <span class="benefit-icon">🎯</span>
+                <h3>Audiencia Calificada</h3>
+                <p>Accede a tomadores de decisión, early adopters y entusiastas de EVs con alto poder adquisitivo.</p>
+            </div>
+            <div class="benefit-card">
+                <span class="benefit-icon">📊</span>
+                <h3>Alcance Regional</h3>
+                <p>Presencia en más de 15 países de América Latina, concentración en mercados clave.</p>
+            </div>
+            <div class="benefit-card">
+                <span class="benefit-icon">💡</span>
+                <h3>Contenido Premium</h3>
+                <p>Asocia tu marca con contenido editorial de alta calidad y análisis experto del sector.</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">Paquetes de Patrocinio</h2>
+        <p class="section-subtitle">Soluciones flexibles adaptadas a tus objetivos</p>
+        
+        <div class="packages-grid">
+            <div class="package-card">
+                <h3 class="package-name">Bronce</h3>
+                <div class="package-price">$2,500<span>/mes</span></div>
+                <ul class="package-features">
+                    <li>Banner en homepage</li>
+                    <li>Newsletter mensual</li>
+                    <li>1 artículo patrocinado/mes</li>
+                    <li>Logo en sponsors</li>
+                    <li>Reporte mensual</li>
+                    <li>100K impresiones/mes</li>
+                </ul>
+                <a href="contacto.html" class="package-button">Comenzar</a>
+            </div>
+
+            <div class="package-card featured">
+                <h3 class="package-name">Plata</h3>
+                <div class="package-price">$5,000<span>/mes</span></div>
+                <ul class="package-features">
+                    <li>Banner premium</li>
+                    <li>Newsletter semanal</li>
+                    <li>2 artículos patrocinados/mes</li>
+                    <li>1 video review</li>
+                    <li>Redes sociales</li>
+                    <li>Logo destacado</li>
+                    <li>Reportes quincenales</li>
+                    <li>250K impresiones/mes</li>
+                </ul>
+                <a href="contacto.html" class="package-button">Comenzar</a>
+            </div>
+
+            <div class="package-card">
+                <h3 class="package-name">Oro</h3>
+                <div class="package-price">$10,000<span>/mes</span></div>
+                <ul class="package-features">
+                    <li>Todo Plata incluido</li>
+                    <li>Exclusividad categoría</li>
+                    <li>4 artículos/mes</li>
+                    <li>Webinar mensual</li>
+                    <li>Campaña redes</li>
+                    <li>Email dedicado</li>
+                    <li>Eventos MOVILIAX</li>
+                    <li>Account manager</li>
+                    <li>Impresiones ilimitadas</li>
+                </ul>
+                <a href="contacto.html" class="package-button">Comenzar</a>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>¿Listo para Impulsar tu Marca?</h2>
+            <p>Únete a las marcas líderes que confían en MOVILIAX</p>
+            <a href="contacto.html" class="cta-button">Solicitar Propuesta</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 MOVILIAX. Todos los derechos reservados. | 
+            <a href="privacidad.html">Privacidad</a> | 
+            <a href="terminos.html">Términos</a> | 
+            <a href="contacto.html">Contacto</a>
+        </p>
+    </footer>
+</body>
+</html>
